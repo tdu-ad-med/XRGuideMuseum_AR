@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{354A5268-3E7A-C10C-A9F2-3DD8E945231C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TouchMenuScript.cs">
+    <Files>
+      <File FileName="Assets/Scripts/FlagScript.cs" Line="37" Column="10" />
+      <File FileName="Assets/Scripts/RayCastMainScript.cs" Line="311" Column="1" />
+      <File FileName="Assets/Scripts/TouchSampleScript.cs" Line="37" Column="14" />
+      <File FileName="Assets/Scripts/TouchMenuScript.cs" Line="36" Column="55" />
+      <File FileName="Assets/Scripts/MaterialChangeScript.cs" Line="72" Column="74" />
+      <File FileName="Assets/Scripts/laungageFlickScript.cs" Line="22" Column="51" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a7eea14e-273c-43f4-90e4-c464f33c6b4b" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

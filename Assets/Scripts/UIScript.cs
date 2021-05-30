@@ -8,10 +8,12 @@ public class UIScript : MonoBehaviour
     static public bool VoiceOn = true;
     static public bool TextOn = true;
     static public bool LaungageOn = true;
+    static public bool AROn = true;
 
     public Text Voice;
     public Text Text;
     public Text Laungage;
+    public Text AR;
 
     AudioSource audioSource;
     public AudioClip sound1;
@@ -21,6 +23,9 @@ public class UIScript : MonoBehaviour
     public Text Laungagetext;
     public Text UImenu;
     public Text determine;
+    public Text ARtext;
+
+   
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +57,14 @@ public class UIScript : MonoBehaviour
         {
             Laungage.text = "OFF";
         }
+        if(AROn == true)
+        {
+            AR.text = "ON";
+        }
+        if(AROn == false)
+        {
+            AR.text = "OFF";
+        }
 
     }
 
@@ -65,6 +78,7 @@ public class UIScript : MonoBehaviour
             Laungagetext.text = "言語切り替えボタン";
             UImenu.text = "UI表示設定";
             determine.text = "決定";
+            ARtext.text = "ARモード";
         }
         if (SystemScript.japan == false)
         {
@@ -73,6 +87,7 @@ public class UIScript : MonoBehaviour
             Laungagetext.text = "Choose Laungage Button";
             UImenu.text = "UI Display Setting";
             determine.text = "determine";
+            ARtext.text = "AR MODE";
         }
     }
 
@@ -122,6 +137,22 @@ public class UIScript : MonoBehaviour
         {
             LaungageOn = true;
             Laungage.text = "ON";
+            return;
+        }
+    }
+    public void ARGUideOn()
+    {
+        audioSource.PlayOneShot(sound1);
+        if (AROn == true)
+        {
+            AROn = false;
+            AR.text = "OFF";
+            return;
+        }
+        if (AROn == false)
+        {
+            AROn = true;
+            AR.text = "ON";
             return;
         }
     }

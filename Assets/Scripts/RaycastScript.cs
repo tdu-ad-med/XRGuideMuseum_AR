@@ -15,11 +15,16 @@ public class RaycastScript : MonoBehaviour
 
     bool Windowstouch = true;
 
+    //Logを正確にとるためのbool判定
+  bool gimicJudgment = true;
+   bool WindowJudment = true;
+
     [SerializeField]
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        WindowJudment = true;
     }
 
     void Update()
@@ -44,9 +49,13 @@ public class RaycastScript : MonoBehaviour
             {
                 if (clickedGameObject.tag == "windows")
                 {
-                    //Debug.Log(clickedGameObject);
+                    if (WindowJudment == true)
+                    {
+                        LogSystemScript.WindowLog += 1;
+                        WindowJudment = false;
+                    }
                     SceneManager.LoadScene("AR_Sample");
-                    LogSystemScript.WindowLog += 1;
+                    
                 }
             }
 
@@ -54,7 +63,12 @@ public class RaycastScript : MonoBehaviour
             {
                 audioSource.PlayOneShot(sound1);
                 BrotherUI.SetActive(true);
-                LogSystemScript.GimicLog += 1;
+
+                if (gimicJudgment == true)
+                {
+                    LogSystemScript.GimicLog += 1;
+                    gimicJudgment = false;
+                }
                 Windowstouch = false;
 
             }
@@ -62,7 +76,11 @@ public class RaycastScript : MonoBehaviour
             {
                 audioSource.PlayOneShot(sound1);
                 AnotherUI.SetActive(true);
-                LogSystemScript.GimicLog += 1;
+                if (gimicJudgment == true)
+                {
+                    LogSystemScript.GimicLog += 1;
+                    gimicJudgment = false;
+                }
                 Windowstouch = false;
             }
         }
@@ -121,5 +139,6 @@ public class RaycastScript : MonoBehaviour
         BrotherUI.SetActive(false);
         Windowstouch = true;
         audioSource.PlayOneShot(sound1);
+        gimicJudgment = true;
     }
 }

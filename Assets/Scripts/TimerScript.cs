@@ -22,7 +22,7 @@ public class TimerScript : MonoBehaviour
     void Update()
     {
         GetComponent<Image>().color = new Color(red, green, blue, alfa);
-        alfa = Mathf.Cos(Time.time+Mathf.PI) / 2  + 0.5f;
+        alfa = Mathf.Cos(3*Time.time+Mathf.PI)/2  + 0.5f;
         
     }
 

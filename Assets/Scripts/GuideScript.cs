@@ -21,7 +21,6 @@ public class GuideScript : MonoBehaviour
     public GameObject Works2;
     public GameObject Works3;
 
-    bool texteron = true;
     bool voiceon = true;
 
     AudioSource audioSource;
@@ -41,6 +40,13 @@ public class GuideScript : MonoBehaviour
     //UI表示非表示の判定
     bool laungageon = true;
     bool textmode = true;
+
+    //Logを正確にとるためのbool判定
+
+    bool TextJudment = true;
+    bool VoiceJudment = true;
+    bool laungageJudment = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -103,17 +109,22 @@ public class GuideScript : MonoBehaviour
     {
         if (laungageon == true)
         {
-            LogSystemScript.LaungageLog += 1;
-            laungage.SetActive(true);
-            laungages.GetComponent<Image>().color = Color.white;
-            laungageon = false;
-            return;
+            if (laungageJudment == true)
+            {
+                LogSystemScript.LaungageLog += 1;
+                laungage.SetActive(true);
+                laungages.GetComponent<Image>().color = Color.white;
+                laungageon = false;
+                laungageJudment = false;
+                return;
+            }
         }
         if (laungageon == false)
         {
             laungage.SetActive(false);
             laungages.GetComponent<Image>().color = Color.gray;
             laungageon = true;
+            laungageJudment = true;
             return;
         }
     }
@@ -171,18 +182,18 @@ public class GuideScript : MonoBehaviour
     }
     public void back()
     {
-        if(texteron == true)
+        if(textmode == false)
         {
             Guide.SetActive(false);
             textGuide.GetComponent<Image>().color = Color.gray;
-            texteron = false;
+       
             audioSource.volume = 0.5f;
             audioSource.PlayOneShot(sound2);
             textmode = true;
             return;
 
         }
-        if (texteron == false)
+        if (textmode == true)
         {
             if (SceneManager.GetActiveScene().name == "AR_Sample")
             {
@@ -197,15 +208,22 @@ public class GuideScript : MonoBehaviour
 
     public void voice()
     {
-        LogSystemScript.VoiceLog += 1;
+        
         if (voiceon == true)
         {
+            if (VoiceJudment == true)
+            {
+                LogSystemScript.VoiceLog += 1;
+                VoiceJudment = false;
+            }
+
             if (SystemScript.japan == false)
             {
                 audioSource.volume = 0.5f;
                 audioSource.PlayOneShot(sound1);
                 voiceon = false;
                 voiceGuide.GetComponent<Image>().color = Color.white;
+               
                 return;
             }
             if (SystemScript.japan == true)
@@ -214,11 +232,13 @@ public class GuideScript : MonoBehaviour
                 audioSource.PlayOneShot(sound1_2);
                 voiceon = false;
                 voiceGuide.GetComponent<Image>().color = Color.white;
+                
                 return;
             }
         }
         if (voiceon == false)
         {
+            VoiceJudment = true;
             audioSource.Stop();
             voiceon = true;
             voiceGuide.GetComponent<Image>().color = Color.gray;
@@ -228,30 +248,37 @@ public class GuideScript : MonoBehaviour
     }
     public void Texter()
     {
-        if (textmode == true)
+        if (textmode == true)//表示する
         {
-            LogSystemScript.TextLog += 1;
-            Guide.SetActive(true);
-            audioSource.volume = 0.5f;
-            audioSource.PlayOneShot(sound2);
-            textGuide.GetComponent<Image>().color = Color.white;
-            texteron = true;
-            textmode = false;
-            return;
+            if (TextJudment == true)
+            {
+                LogSystemScript.TextLog += 1;
+                Guide.SetActive(true);
+                audioSource.volume = 0.5f;
+                audioSource.PlayOneShot(sound2);
+                textGuide.GetComponent<Image>().color = Color.white;
+
+                textmode = false;
+                TextJudment = false;
+                return;
+            }
         }
-        if(textmode ==false)
+        if(textmode ==false)//隠す
         {
             Guide.SetActive(false);
             audioSource.volume = 0.5f;
             audioSource.PlayOneShot(sound2);
             textGuide.GetComponent<Image>().color = Color.gray;
+
             textmode = true;
+            TextJudment = true;
             return;
         }
     }
 
     public void Left()
     {
+       
         if (anothernumber == 1)
         {
             
@@ -334,7 +361,6 @@ public class GuideScript : MonoBehaviour
         }
         if (anothernumber == 2)
         {
-          
             Works3.SetActive(true);
             Works1.SetActive(false);
             Works2.SetActive(false);

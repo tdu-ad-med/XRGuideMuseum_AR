@@ -12,6 +12,7 @@ public class SystemScript : MonoBehaviour
     public GameObject UI;
     public GameObject UI2;
     public GameObject UI3;
+    //public GameObject UI5;
 
     public Text marker;
     public Text title;
@@ -37,10 +38,12 @@ public class SystemScript : MonoBehaviour
 
     bool Final = false;
 
+    static public bool ARStart = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        ARStart = false;
         audioSource = GetComponent<AudioSource>();
         if (japan == false)
         {
@@ -127,10 +130,18 @@ public class SystemScript : MonoBehaviour
     {
         Final = true;
         audioSource.PlayOneShot(sound1);
-        WhiteBoard.SetActive(true);
-        
-        laungages.SetActive(false);
         Destroy(Button.gameObject);
+        laungages.SetActive(false);
+        if (UIScript.AROn == false)
+        {
+            WhiteBoard.SetActive(true);
+            
+        }
+        if(UIScript.AROn == true)
+        {
+            ARStart = true;
+            //UI5.SetActive(true);
+        }
        
     }
 

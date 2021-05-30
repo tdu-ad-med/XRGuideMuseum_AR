@@ -33,7 +33,7 @@ public class LogSystemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Logdata5.text = "x"+ TouchMenuScript.positionx +"y"+ TouchMenuScript.positiony + "z"+ TouchMenuScript.positionz;
     }
     public void Log()
     {

@@ -110,51 +110,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11766}
     - Class: 114
-      Script: {instanceID: 11868}
+      Script: {instanceID: 11812}
     - Class: 114
-      Script: {instanceID: 12056}
+      Script: {instanceID: 11870}
     - Class: 114
-      Script: {instanceID: 12354}
+      Script: {instanceID: 12058}
     - Class: 114
-      Script: {instanceID: 12546}
+      Script: {instanceID: 12356}
     - Class: 114
-      Script: {instanceID: 12552}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12554}
     - Class: 114
-      Script: {instanceID: 12808}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 12880}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 12904}
+      Script: {instanceID: 12882}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 13046}
+      Script: {instanceID: 12944}
     - Class: 114
-      Script: {instanceID: 13334}
+      Script: {instanceID: 13048}
     - Class: 114
-      Script: {instanceID: 13426}
+      Script: {instanceID: 13336}
     - Class: 114
-      Script: {instanceID: 13588}
+      Script: {instanceID: 13428}
     - Class: 114
-      Script: {instanceID: 13650}
+      Script: {instanceID: 13590}
     - Class: 114
-      Script: {instanceID: 13664}
+      Script: {instanceID: 13652}
     - Class: 114
-      Script: {instanceID: 13682}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 13828}
+      Script: {instanceID: 13684}
     - Class: 114
-      Script: {instanceID: 14020}
+      Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 14162}
+      Script: {instanceID: 14022}
     - Class: 114
-      Script: {instanceID: 14202}
+      Script: {instanceID: 14164}
     - Class: 114
-      Script: {instanceID: 14282}
+      Script: {instanceID: 14204}
     - Class: 114
-      Script: {instanceID: 21334}
+      Script: {instanceID: 14284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -223,19 +223,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11726}
     - Class: 114
-      Script: {instanceID: 11900}
+      Script: {instanceID: 11902}
     - Class: 114
-      Script: {instanceID: 12458}
+      Script: {instanceID: 12460}
     - Class: 114
-      Script: {instanceID: 12552}
+      Script: {instanceID: 12554}
     - Class: 114
-      Script: {instanceID: 13650}
+      Script: {instanceID: 13652}
     - Class: 114
-      Script: {instanceID: 13900}
+      Script: {instanceID: 13902}
     - Class: 114
-      Script: {instanceID: 13928}
+      Script: {instanceID: 13930}
     - Class: 114
-      Script: {instanceID: 14282}
+      Script: {instanceID: 14284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -288,13 +288,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11726}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 12312}
     - Class: 114
-      Script: {instanceID: 12458}
+      Script: {instanceID: 12460}
     - Class: 114
-      Script: {instanceID: 12552}
+      Script: {instanceID: 12554}
     - Class: 114
-      Script: {instanceID: 14282}
+      Script: {instanceID: 14284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -324,12 +324,6 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GraphicRaycaster
-  - hash:
-      serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -340,6 +334,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -364,6 +364,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RotationScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1114,12 +1120,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RotationScript
   platform: 9
   scenePathNames:
   - Assets/GohoStages/Scenes/AR_Main.unity

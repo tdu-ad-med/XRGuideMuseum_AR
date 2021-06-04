@@ -54,12 +54,6 @@ public class RayCastMainScript : MonoBehaviour
     void Start()
     {
         audioSource2 = GetComponent<AudioSource>();
-        GameObject cube7 = GameObject.Find("particle_1");
-        GameObject cube8 = GameObject.Find("particle_2");
-        cube7.SetActive(false);
-        cube8.SetActive(false);
-        //cube7.GetComponent<ParticleSystem>().Stop();
-        //cube8.GetComponent<ParticleSystem>().Stop();
 
     }
 
@@ -121,6 +115,10 @@ public class RayCastMainScript : MonoBehaviour
         {
             if (count == 0)
             {
+                GameObject cube7 =GameObject.Find("particle_1");
+                cube7.GetComponent<ParticleSystem>().Stop();
+                GameObject cube8 = GameObject.Find("particle_2");
+                cube8.GetComponent<ParticleSystem>().Stop();
                 if (SystemScript.japan == true)
                 {
                     Japanese();
@@ -334,6 +332,7 @@ public class RayCastMainScript : MonoBehaviour
                     cube8.GetComponent<ParticleSystem>().Play();
                     LogSystemScript.GimicLog++;
                     gimic2judment = false;
+
                 }
             }
 

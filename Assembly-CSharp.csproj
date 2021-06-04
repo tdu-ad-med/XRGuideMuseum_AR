@@ -64,27 +64,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Outline\OutlinePostEffect.cs" />
-    <Compile Include="Assets\Scripts\ARGuideSystemScript.cs" />
-    <Compile Include="Assets\Scripts\FadeInScript.cs" />
-    <Compile Include="Assets\Scripts\FadeOutScript.cs" />
-    <Compile Include="Assets\Scripts\FlagScript.cs" />
-    <Compile Include="Assets\Scripts\GuideScript.cs" />
-    <Compile Include="Assets\Scripts\GuideScript2.cs" />
-    <Compile Include="Assets\Scripts\Jairo.cs" />
-    <Compile Include="Assets\Scripts\LogSystemScript.cs" />
-    <Compile Include="Assets\Scripts\MaterialChangeScript.cs" />
-    <Compile Include="Assets\Scripts\RayCastMainScript.cs" />
-    <Compile Include="Assets\Scripts\RaycastScript.cs" />
-    <Compile Include="Assets\Scripts\SystemScript.cs" />
-    <Compile Include="Assets\Scripts\TimerScript.cs" />
-    <Compile Include="Assets\Scripts\TouchMenuScript.cs" />
-    <Compile Include="Assets\Scripts\TouchSampleScript.cs" />
-    <Compile Include="Assets\Scripts\UIScript.cs" />
-    <Compile Include="Assets\Scripts\laungageFlickScript.cs" />
-    <None Include="Assets\Outline\PostOutline.shader" />
-    <None Include="Assets\Outline\SceneViewSelected.cginc" />
-    <None Include="Assets\Outline\DrawSimple.shader" />
+    <Compile Include="Assets\GohoStages\Materials\Goho_Room_materials\Outline\OutlinePostEffect.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\BlinkingScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\FadeInScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\FlagScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\LogSystemScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\MaterialChangeScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\RayCastMainScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\RotationScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\SystemScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\TouchMenuScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\TouchTextScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\UIScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\AR_Main\laungageFlickScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\Goho_Room\FadeOutScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\Goho_Room\GuideScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\Goho_Room\RaycastScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\Goho_World\JairoScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\NoUse\ARGuideSystemScript.cs" />
+    <Compile Include="Assets\HokusaiStages\Scripts\FlagScript_2.cs" />
+    <None Include="Assets\GohoStages\Materials\Goho_Room_materials\Outline\PostOutline.shader" />
+    <None Include="Assets\GohoStages\Materials\Goho_Room_materials\Outline\SceneViewSelected.cginc" />
+    <None Include="Assets\GohoStages\Materials\Goho_Room_materials\Outline\DrawSimple.shader" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.21f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

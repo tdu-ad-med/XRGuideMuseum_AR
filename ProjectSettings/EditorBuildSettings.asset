@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AR_Main.unity
+    path: Assets/GohoStages/Scenes/AR_Main.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/AR_Sample.unity
+    path: Assets/GohoStages/Scenes/Gohho_World.unity
     guid: 2b22df61590a14076a0c552c828f25ac
   - enabled: 1
-    path: Assets/Scenes/AR_Sample2.unity
+    path: Assets/GohoStages/Scenes/Gohho_Room.unity
     guid: 847872dc3df0a48dca0c94e23c06b408
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 62224f1ec3a5a419798942dd893b8baa,

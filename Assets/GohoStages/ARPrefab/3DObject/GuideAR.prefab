@@ -108,4 +108,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AR_GameObject: {fileID: 556030281391565611, guid: f1bde45bd84364bb3890506d9f979363,
     type: 3}
-  Goho_Script: {fileID: 0}

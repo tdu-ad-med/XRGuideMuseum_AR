@@ -82,7 +82,9 @@
     <Compile Include="Assets\GohoStages\Scripts\Goho_Room\RaycastScript.cs" />
     <Compile Include="Assets\GohoStages\Scripts\Goho_World\JairoScript.cs" />
     <Compile Include="Assets\GohoStages\Scripts\NoUse\ARGuideSystemScript.cs" />
+    <Compile Include="Assets\GohoStages\Scripts\NoUse\ImageTrackerManager.cs" />
     <Compile Include="Assets\HokusaiStages\Scripts\FlagScript_2.cs" />
+    <Compile Include="Assets\HokusaiStages\Scripts\RayCastScript2.cs" />
     <None Include="Assets\GohoStages\Materials\Goho_Room_materials\Outline\PostOutline.shader" />
     <None Include="Assets\GohoStages\Materials\Goho_Room_materials\Outline\SceneViewSelected.cginc" />
     <None Include="Assets\GohoStages\Materials\Goho_Room_materials\Outline\DrawSimple.shader" />

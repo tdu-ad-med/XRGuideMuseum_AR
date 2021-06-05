@@ -12,6 +12,7 @@ public class SystemScript : MonoBehaviour
     public GameObject UI;
     public GameObject UI2;
     public GameObject UI3;
+    public GameObject UI5;
     public GameObject Edit;
     public GameObject Secretbutton;
 
@@ -20,6 +21,8 @@ public class SystemScript : MonoBehaviour
     public Text title;
     public Text Artist;
     public Text book;
+    public Text title_2;
+    public Text Artist_2;
 
     [Header("ボタン")]
     public GameObject Button;//「この世界に行く」のボタン
@@ -39,6 +42,7 @@ public class SystemScript : MonoBehaviour
     //判定ツール
     static public bool japan = false;
     static public bool ARStart = false;
+    static public bool ARStart_2 = false;
     bool Final = false;
 
 
@@ -84,6 +88,19 @@ public class SystemScript : MonoBehaviour
                 UI2.SetActive(false);
                 Secretbutton.SetActive(true);
             }
+
+            if (FlagScript_2.flag_2 == false)
+            {
+                UI.SetActive(false);
+                UI5.SetActive(true);
+                Secretbutton.SetActive(false);
+            }
+            if (FlagScript_2.flag_2 == true)
+            {
+                UI.SetActive(true);
+                UI5.SetActive(false);
+                Secretbutton.SetActive(true);
+            }
         }
 
         if (Final == true)
@@ -91,10 +108,11 @@ public class SystemScript : MonoBehaviour
             UI3.SetActive(false);
             UI.SetActive(false);
             UI2.SetActive(false);
+            UI5.SetActive(false);
             Secretbutton.SetActive(false);
         }
     }
-    public void Onclick2()
+    public void Onclick2()//設定画面を開くボタン
     {
         UI3.SetActive(true);
     }
@@ -104,6 +122,8 @@ public class SystemScript : MonoBehaviour
         marker.text = "マーカーを読み取ってください";
         title.text = "星月夜";
         Artist.text = "ヴァン・ゴッホ";
+        title_2.text = "神奈川沖浪裏";
+        Artist_2.text = "葛飾北斎";
         book.text = "この世界に行く";
         japan = true;
         audioSource.PlayOneShot(sound2);
@@ -117,6 +137,8 @@ public class SystemScript : MonoBehaviour
         marker.text = "Please project the painting";
         title.text = "The starry night";
         Artist.text = "Vincent Willem van Gogh";
+        title_2.text = "The Great Wave off Kanagawa";
+        Artist_2.text = "Katsushika Hokusai";
         book.text = "See the world";
         japan = false;
         audioSource.PlayOneShot(sound2);
@@ -128,32 +150,59 @@ public class SystemScript : MonoBehaviour
 
     public void back()
     {
-        SceneManager.LoadScene("AR_Main");
+        if (SceneManager.GetActiveScene().name == "AR_Main")
+        {
+            SceneManager.LoadScene("AR_Main");
+        }
+        else if (SceneManager.GetActiveScene().name == "AR_Main2")
+        {
+            SceneManager.LoadScene("AR_Main2");
+        }
         FlagScript.flag = true;
+        FlagScript_2.flag_2 = true;
     }
 
     public void Onclick()//この世界にいく、をクリックした時のイベント
     {
+        Edit.SetActive(false);
         Final = true;
         audioSource.PlayOneShot(sound1);
-        Destroy(Button.gameObject);
-        Edit.SetActive(false);
+        
         if (UIScript.AROn == false)
         {
             WhiteBoard.SetActive(true);
-            
+
         }
-        if(UIScript.AROn == true)
+        if (UIScript.AROn == true && FlagScript.flag == false)
         {
-            ARStart = true;
+            ARStart = true; 
         }
-       
+        if (UIScript.AROn == true && FlagScript_2.flag_2 == false)
+        {
+            ARStart_2 = true;
+        }
+        Destroy(Button.gameObject);
+        
+
+
     }
 
     public void determine()
     {
         audioSource.PlayOneShot(sound3);
         UI3.SetActive(false);
+    }
+
+    public void MoveScene()
+    {
+        if (SceneManager.GetActiveScene().name == "AR_Main")
+        {
+            SceneManager.LoadScene("AR_Main2");
+        }
+        else if(SceneManager.GetActiveScene().name == "AR_Main2")
+        {
+            SceneManager.LoadScene("AR_Main");
+        }
     }
 
 }

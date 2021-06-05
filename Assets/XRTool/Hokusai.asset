@@ -25,3 +25,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: Hokusai
     m_Texture: {fileID: 2800000, guid: 3a84083dbedb14e72894493ebe038019, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4687114861206959606
+      m_GuidHigh: 14226053285278147240
+    m_SerializedTextureGuid:
+      m_GuidLow: 14173445815418125627
+      m_GuidHigh: 13863238316107386682
+    m_Size: {x: 0.2, y: 0.125}
+    m_SpecifySize: 1
+    m_Name: gohho2
+    m_Texture: {fileID: 2800000, guid: ff3e7d3b31dfc4b23a4f2a44cc1d64c0, type: 3}

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8499457882486312901}
   - component: {fileID: 8499457882486312900}
   - component: {fileID: 8499457882486312899}
+  - component: {fileID: 8499457882006838248}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -86,8 +87,6 @@ MonoBehaviour:
   sound_Moon: {fileID: 8300000, guid: b74048e5e17bb49a1bc876ecc9d1cdcf, type: 3}
   arCamera: {fileID: 8499457882496783651}
   raycastManager: {fileID: 8499457882486312900}
-  wave_1: {fileID: 3994873064491501398, guid: fb9154910c3464235af11f15ebe5b136, type: 3}
-  wave_2: {fileID: 1656213836859492256, guid: 90eed6a3b6f7944e3a29d32199dbe9b7, type: 3}
 --- !u!114 &8499457882486312900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +197,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8499457882006838248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8499457882486312952}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79a698d75d874e3cba4512c60a9a6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectsToPlace:
+  - {fileID: 8469420295891158464, guid: 6708c72a87d9b42dc8d357eb7ac66797, type: 3}
+  - {fileID: 4021705609589334189, guid: 52a457380b3e449668601526c6c545cd, type: 3}
 --- !u!1 &8499457882496783650
 GameObject:
   m_ObjectHideFlags: 0

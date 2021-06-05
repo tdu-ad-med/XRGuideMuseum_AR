@@ -2299,6 +2299,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.0019
       objectReference: {fileID: 0}
+    - target: {fileID: 2927185787233573223, guid: b325de313f67847b7a70f14f0cd7cbf7,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 31c9e3ad4dfbd409fbdf367145ca1c1b,
+        type: 3}
     - target: {fileID: 3841192582819811286, guid: b325de313f67847b7a70f14f0cd7cbf7,
         type: 3}
       propertyPath: m_FontData.m_FontSize

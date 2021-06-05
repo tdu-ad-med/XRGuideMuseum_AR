@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - FlagScript
     - FlagScript_2
     - GuideScript
+    - ImageTrackerManager
     - JairoScript
     - LogSystemScript
     - MaterialChangeScript
@@ -148,13 +149,140 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 14022}
+      Script: {instanceID: 14024}
     - Class: 114
-      Script: {instanceID: 14164}
+      Script: {instanceID: 14166}
     - Class: 114
-      Script: {instanceID: 14204}
+      Script: {instanceID: 14206}
     - Class: 114
-      Script: {instanceID: 14284}
+      Script: {instanceID: 14286}
+    - Class: 114
+      Script: {instanceID: 51816}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/GohoStages/Scenes/AR_Main2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11718}
+    - Class: 114
+      Script: {instanceID: 11720}
+    - Class: 114
+      Script: {instanceID: 11722}
+    - Class: 114
+      Script: {instanceID: 11724}
+    - Class: 114
+      Script: {instanceID: 11726}
+    - Class: 114
+      Script: {instanceID: 11766}
+    - Class: 114
+      Script: {instanceID: 11812}
+    - Class: 114
+      Script: {instanceID: 11870}
+    - Class: 114
+      Script: {instanceID: 12058}
+    - Class: 114
+      Script: {instanceID: 12356}
+    - Class: 114
+      Script: {instanceID: 12548}
+    - Class: 114
+      Script: {instanceID: 12554}
+    - Class: 114
+      Script: {instanceID: 12738}
+    - Class: 114
+      Script: {instanceID: 12810}
+    - Class: 114
+      Script: {instanceID: 12882}
+    - Class: 114
+      Script: {instanceID: 12906}
+    - Class: 114
+      Script: {instanceID: 12944}
+    - Class: 114
+      Script: {instanceID: 13048}
+    - Class: 114
+      Script: {instanceID: 13336}
+    - Class: 114
+      Script: {instanceID: 13428}
+    - Class: 114
+      Script: {instanceID: 13590}
+    - Class: 114
+      Script: {instanceID: 13652}
+    - Class: 114
+      Script: {instanceID: 13666}
+    - Class: 114
+      Script: {instanceID: 13684}
+    - Class: 114
+      Script: {instanceID: 13830}
+    - Class: 114
+      Script: {instanceID: 14024}
+    - Class: 114
+      Script: {instanceID: 14166}
+    - Class: 114
+      Script: {instanceID: 14206}
+    - Class: 114
+      Script: {instanceID: 14286}
+    - Class: 114
+      Script: {instanceID: 51816}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -231,11 +359,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13652}
     - Class: 114
-      Script: {instanceID: 13902}
+      Script: {instanceID: 13904}
     - Class: 114
-      Script: {instanceID: 13930}
+      Script: {instanceID: 13932}
     - Class: 114
-      Script: {instanceID: 14284}
+      Script: {instanceID: 14286}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -294,7 +422,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12554}
     - Class: 114
-      Script: {instanceID: 14284}
+      Script: {instanceID: 14286}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -540,7 +668,7 @@ ScriptsOnlyBuild:
     className: TransitionArmModel
   - hash:
       serializedVersion: 2
-      Hash: 43ed9575f0139c828f32d790a8ed2b7b
+      Hash: c54901cf77deadf76ffe1b6a57b07822
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FlagScript_2
@@ -702,7 +830,7 @@ ScriptsOnlyBuild:
     className: FadeInScript
   - hash:
       serializedVersion: 2
-      Hash: 43ed9575f0139c828f32d790a8ed2b7b
+      Hash: c54901cf77deadf76ffe1b6a57b07822
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FlagScript
@@ -726,7 +854,7 @@ ScriptsOnlyBuild:
     className: ARPointCloud
   - hash:
       serializedVersion: 2
-      Hash: 13122af5f3b1b5fd83dc81008d95a37e
+      Hash: 7b1bcc699e6703009c6e06079d9d9ba7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SystemScript
@@ -930,6 +1058,12 @@ ScriptsOnlyBuild:
     className: AROcclusionManager
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RayCastScript2
+  - hash:
+      serializedVersion: 2
       Hash: 9d9e3a7981787e0d23d6c954781d7643
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1120,9 +1254,16 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: c60023b8b5011d16686aa7076ebfca47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ImageTrackerManager
   platform: 9
   scenePathNames:
   - Assets/GohoStages/Scenes/AR_Main.unity
+  - Assets/GohoStages/Scenes/AR_Main2.unity
   - Assets/GohoStages/Scenes/Gohho_World.unity
   - Assets/GohoStages/Scenes/Gohho_Room.unity
   playerPath: /Users/yamashitaayane/Documents/ARImage

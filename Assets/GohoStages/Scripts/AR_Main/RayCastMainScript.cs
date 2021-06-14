@@ -41,6 +41,7 @@ public class RayCastMainScript : MonoBehaviour
     bool VoiceJudment = true;
     bool laungageJudment =true;
     bool gimic2judment = true;
+    bool gimic3judment = true;
     //AR起動したとき、日本語版と英語版が設定から反映するときに、一回処理する
     int count = 0;
     //音量調節
@@ -170,9 +171,10 @@ public class RayCastMainScript : MonoBehaviour
                     cube6.GetComponent<Canvas>().enabled = true;
                     cube5.GetComponent<Canvas>().enabled = true;
                     cube7.GetComponent<Canvas>().enabled = true;
-                    worksmode = true;
                     audioSource2.volume = sound_Book_volume;
                     audioSource2.PlayOneShot(sound_Book);
+                    LogSystemScript.GimicLog++;
+                    worksmode = true;
 
                     return;
                 }
@@ -198,8 +200,13 @@ public class RayCastMainScript : MonoBehaviour
 
             if (clickedGameObject.tag == "Brother")
             {
-                GameObject cube5 = GameObject.Find("Theotext");
-                cube5.GetComponent<Canvas>().enabled = true;
+                if (gimic3judment == true)
+                {
+                    GameObject cube5 = GameObject.Find("Theotext");
+                    cube5.GetComponent<Canvas>().enabled = true;
+                    LogSystemScript.GimicLog++;
+                    gimic3judment = false;
+                }
             }
             if (clickedGameObject.tag == "Voice")
             {
@@ -294,10 +301,10 @@ public class RayCastMainScript : MonoBehaviour
                 if (laungageon == true)
                 {
                     GameObject.Find("laungageon").GetComponent<Renderer>().material.color = Color.white;
-                    
-                    laungageon = false;
                     cube3.GetComponent<Canvas>().enabled = true;
                     cube4.GetComponent<Canvas>().enabled = true;
+                    laungageon = false;
+
                     return;
 
                     
@@ -307,9 +314,9 @@ public class RayCastMainScript : MonoBehaviour
                 {
                     laungageJudment = true;
                     GameObject.Find("laungageon").GetComponent<Renderer>().material.color = Color.gray;
-                    laungageon = true;
                     cube3.GetComponent<Canvas>().enabled = false;
                     cube4.GetComponent<Canvas>().enabled = false;
+                    laungageon = true;
                     return;
 
 
@@ -318,7 +325,14 @@ public class RayCastMainScript : MonoBehaviour
 
             if (clickedGameObject.tag == "Back")
             {
-                SceneManager.LoadScene("AR_Main");
+                if (SceneManager.GetActiveScene().name == "AR_Main")
+                {
+                    SceneManager.LoadScene("AR_Main");
+                }
+                else if (SceneManager.GetActiveScene().name == "AR_Main2")
+                {
+                    SceneManager.LoadScene("AR_Main2");
+                }
             }
 
             if(clickedGameObject.tag == "Wave")

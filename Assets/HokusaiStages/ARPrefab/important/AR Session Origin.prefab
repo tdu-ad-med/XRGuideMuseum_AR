@@ -131,10 +131,10 @@ GameObject:
   - component: {fileID: 60049095486731408}
   - component: {fileID: 60049095486731788}
   - component: {fileID: 60049095486731789}
-  - component: {fileID: 60049095486731790}
   - component: {fileID: 60049095486731791}
   - component: {fileID: 60049095486731770}
   - component: {fileID: 60049095486731784}
+  - component: {fileID: 81194518482171537}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -182,31 +182,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedLibrary: {fileID: 11400000, guid: 83eb949d9cd8c4444b160e2c0857134a,
+  m_SerializedLibrary: {fileID: 11400000, guid: cc78f7d7821c84a5680d82f32bdf868a,
     type: 2}
   m_MaxNumberOfMovingImages: 1
   m_TrackedImagePrefab: {fileID: 4021705609589334189, guid: 52a457380b3e449668601526c6c545cd,
     type: 3}
---- !u!114 &60049095486731790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60049095486731487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ff1cf59fbe3468c8f30adf06737eb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoonObject: {fileID: 8302024962229803084, guid: 6fc62b7bfe1b84b9b9ebb143bc8635b0,
-    type: 3}
-  sound1: {fileID: 8300000, guid: d80df3dc34fd64b5da47d4f952a075ee, type: 3}
-  sound1_2: {fileID: 8300000, guid: cd2048671ed2c4348affa61389e8843c, type: 3}
-  sound_Book: {fileID: 8300000, guid: e811ba8194d684edc8cbad6b9fd2d6b7, type: 3}
-  sound_Moon: {fileID: 8300000, guid: b74048e5e17bb49a1bc876ecc9d1cdcf, type: 3}
-  arCamera: {fileID: 60049095486731413}
-  raycastManager: {fileID: 60049095486731791}
 --- !u!114 &60049095486731791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,3 +312,20 @@ MonoBehaviour:
   ObjectsToPlace:
   - {fileID: 8469420295891158464, guid: 6708c72a87d9b42dc8d357eb7ac66797, type: 3}
   - {fileID: 4021705609589334189, guid: 52a457380b3e449668601526c6c545cd, type: 3}
+--- !u!114 &81194518482171537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60049095486731487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdcddec9ba4e4d8cb22694190d758d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound1: {fileID: 8300000, guid: a11f5e19bb9784da4a2ca07224a1260f, type: 3}
+  sound1_2: {fileID: 8300000, guid: 2a792c23fb7f54326ac026eb9eb7fda5, type: 3}
+  sound_Book: {fileID: 8300000, guid: e811ba8194d684edc8cbad6b9fd2d6b7, type: 3}
+  arCamera: {fileID: 60049095486731413}
+  raycastManager: {fileID: 60049095486731791}

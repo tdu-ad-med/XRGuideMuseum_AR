@@ -51,6 +51,7 @@ public class SystemScript : MonoBehaviour
     void Start()
     {
         ARStart = false;
+        ARStart_2 = false;
         audioSource = GetComponent<AudioSource>();
         if (japan == false)
         {

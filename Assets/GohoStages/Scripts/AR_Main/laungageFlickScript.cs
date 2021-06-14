@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class laungageFlickScript : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class laungageFlickScript : MonoBehaviour
 
     [Header("言語を変換するスクリプトがアタッチされているゲームオブジェクト")]
     public GameObject LaungageBox;
+    public GameObject LaungageBox2;
 
     [Header("言語を決めた後のSE")]
     AudioSource audioSource2;
@@ -24,9 +26,19 @@ public class laungageFlickScript : MonoBehaviour
     }
     void Update()
     {
-        if (RayCastMainScript.laungageon == false)
+        if (SceneManager.GetActiveScene().name == "AR_Main")
         {
-            Flick();
+            if (RayCastMainScript.laungageon == false && RayCastMainScript.texton1 == true && RayCastMainScript.worksmode == false)
+            {
+                Flick();
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "AR_Main2")
+        {
+            if (RayCastScript2.laungageon2 == false && RayCastScript2.texton2 == true && RayCastScript2.worksmode2 == false)
+            {
+                Flick();
+            }
         }
 
         if (rightmode == true)
@@ -38,11 +50,26 @@ public class laungageFlickScript : MonoBehaviour
             GameObject.Find("laungageon").GetComponent<Renderer>().material.color = Color.gray;
             cube3.GetComponent<Canvas>().enabled = false;
             cube4.GetComponent<Canvas>().enabled = false;
-            LaungageBox.GetComponent<RayCastMainScript>().English();
+            if (SceneManager.GetActiveScene().name == "AR_Main")
+            {
+                LaungageBox.GetComponent<RayCastMainScript>().English();
+            }
+            if (SceneManager.GetActiveScene().name == "AR_Main2")
+            {
+                LaungageBox2.GetComponent<RayCastScript2>().English();
+            }
             audioSource2.volume = laungagevolume;
             audioSource2.PlayOneShot(sound_laungage);
+            
+            if (SceneManager.GetActiveScene().name == "AR_Main")
+            {
+                RayCastMainScript.laungageon = true;
+            }
+            if (SceneManager.GetActiveScene().name == "AR_Main2")
+            {
+                RayCastScript2.laungageon2 = true;
+            }
             rightmode = false;
-            RayCastMainScript.laungageon = true;
             return;
 
 
@@ -55,11 +82,27 @@ public class laungageFlickScript : MonoBehaviour
             GameObject.Find("laungageon").GetComponent<Renderer>().material.color = Color.gray;
             cube3.GetComponent<Canvas>().enabled = false;
             cube4.GetComponent<Canvas>().enabled = false;
+            if (SceneManager.GetActiveScene().name == "AR_Main")
+            {
+                LaungageBox.GetComponent<RayCastMainScript>().Japanese();
+            }
+            if (SceneManager.GetActiveScene().name == "AR_Main2")
+            {
+                LaungageBox2.GetComponent<RayCastScript2>().Japanese();
+            }
+
             audioSource2.volume = laungagevolume;
-            audioSource2.PlayOneShot(sound_laungage);
-            LaungageBox.GetComponent<RayCastMainScript>().Japanese();
+            audioSource2.PlayOneShot(sound_laungage);//ここの部分が作動していない
+            
+            if (SceneManager.GetActiveScene().name == "AR_Main")
+            {
+                RayCastMainScript.laungageon = true;
+            }
+            if (SceneManager.GetActiveScene().name == "AR_Main2")
+            {
+                RayCastScript2.laungageon2 = true;
+            }
             leftmode = false;
-            RayCastMainScript.laungageon = true;
             return;
         }
 

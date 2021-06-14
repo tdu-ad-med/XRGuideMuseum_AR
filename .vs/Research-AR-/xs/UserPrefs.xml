@@ -1,17 +1,13 @@
 ﻿<Properties StartupConfiguration="{354A5268-3E7A-C10C-A9F2-3DD8E945231C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GohoStages/Scripts/AR_Main/SystemScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/HokusaiStages/Scripts/RayCastScript2.cs">
     <Files>
-      <File FileName="Assets/HokusaiStages/Scripts/FlagScript_2.cs" Line="11" Column="4" />
-      <File FileName="Assets/GohoStages/Scripts/AR_Main/FlagScript.cs" />
-      <File FileName="Assets/GohoStages/Scripts/AR_Main/RotationScript.cs" />
-      <File FileName="Assets/GohoStages/Scripts/AR_Main/RayCastMainScript.cs" />
-      <File FileName="Assets/GohoStages/Scripts/AR_Main/SystemScript.cs" Line="159" Column="45" />
-      <File FileName="Assets/GohoStages/Scripts/Goho_World/JairoScript.cs" />
+      <File FileName="Assets/GohoStages/Scripts/AR_Main/RayCastMainScript.cs" Line="120" Column="43" />
+      <File FileName="Assets/HokusaiStages/Scripts/RayCastScript2.cs" Line="71" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9b69b787-d27d-4e6e-bb5a-83483ee3cf6d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ea0f541e-d324-4714-8f66-f7c34e828d49" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

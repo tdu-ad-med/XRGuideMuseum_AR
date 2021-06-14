@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TouchMenuScript : MonoBehaviour
 {
@@ -26,15 +27,24 @@ public class TouchMenuScript : MonoBehaviour
 
     private void Update()
     {
-        if (RayCastMainScript.texton1 == true)
-        { if (RayCastMainScript.worksmode == false) {
-                if (RayCastMainScript.laungageon == true)
-                {
-                    Flick();
-                    /*positionx = this.transform.position.x;
-                    positiony = this.transform.position.y;
-                    positionz = this.transform.position.z;*/
-                }
+        if (SceneManager.GetActiveScene().name == "AR_Main")
+        {
+            if (RayCastMainScript.texton1 == true && RayCastMainScript.worksmode == false && RayCastMainScript.laungageon == true)
+            {
+                Flick();
+                /*positionx = this.transform.position.x;
+                positiony = this.transform.position.y;
+                positionz = this.transform.position.z;*/
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "AR_Main2")
+        {
+            if (RayCastScript2.texton2 == true && RayCastScript2.worksmode2 == false && RayCastScript2.laungageon2 == true)
+            {
+                Flick();
+                /*positionx = this.transform.position.x;
+                positiony = this.transform.position.y;
+                positionz = this.transform.position.z;*/
             }
         }
 

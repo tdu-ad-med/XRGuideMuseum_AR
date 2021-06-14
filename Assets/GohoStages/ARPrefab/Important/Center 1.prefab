@@ -240,6 +240,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaungageBox: {fileID: 8499457882486312952, guid: 49246d186bfb243bebc71ab8d7293165,
     type: 3}
+  LaungageBox2: {fileID: 60049095486731487, guid: 989b872793bf646a6b8d3e3c63e20d11,
+    type: 3}
   sound_laungage: {fileID: 8300000, guid: cf878233e691f4452a5aa9d5dc769f39, type: 3}
 --- !u!1 &2359161300006886014
 GameObject:
@@ -1213,7 +1215,7 @@ PrefabInstance:
     - target: {fileID: 6575652552006570779, guid: 612a326869fe841d6b2b373d3b4efd6e,
         type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6575652552006570857, guid: 612a326869fe841d6b2b373d3b4efd6e,
         type: 3}
@@ -2289,6 +2291,16 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 1223248349845065343, guid: b325de313f67847b7a70f14f0cd7cbf7,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958334547993546802, guid: b325de313f67847b7a70f14f0cd7cbf7,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1958334547993546829, guid: b325de313f67847b7a70f14f0cd7cbf7,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -2309,6 +2321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205844466793201938, guid: b325de313f67847b7a70f14f0cd7cbf7,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4387979146046495797, guid: b325de313f67847b7a70f14f0cd7cbf7,
         type: 3}
@@ -2420,6 +2437,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.363
       objectReference: {fileID: 0}
+    - target: {fileID: 5758605127479104006, guid: b325de313f67847b7a70f14f0cd7cbf7,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5925460996379355955, guid: b325de313f67847b7a70f14f0cd7cbf7,
         type: 3}
       propertyPath: m_TagString
@@ -2484,6 +2506,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.467
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069440795051357764, guid: b325de313f67847b7a70f14f0cd7cbf7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1041
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069440795051357764, guid: b325de313f67847b7a70f14f0cd7cbf7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0803
       objectReference: {fileID: 0}
     - target: {fileID: 7970540571885438985, guid: b325de313f67847b7a70f14f0cd7cbf7,
         type: 3}
@@ -2706,6 +2738,12 @@ PrefabInstance:
       propertyPath: LaungageBox
       value: 
       objectReference: {fileID: 8499457882486312952, guid: 49246d186bfb243bebc71ab8d7293165,
+        type: 3}
+    - target: {fileID: 3890101737355594983, guid: ea17b79f53ef642fa9dbf053142753c6,
+        type: 3}
+      propertyPath: LaungageBox2
+      value: 
+      objectReference: {fileID: 60049095486731487, guid: 989b872793bf646a6b8d3e3c63e20d11,
         type: 3}
     - target: {fileID: 3890101737355594983, guid: ea17b79f53ef642fa9dbf053142753c6,
         type: 3}
@@ -3265,7 +3303,7 @@ PrefabInstance:
     - target: {fileID: 8302024962229803044, guid: 6fc62b7bfe1b84b9b9ebb143bc8635b0,
         type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8302024962229803084, guid: 6fc62b7bfe1b84b9b9ebb143bc8635b0,
         type: 3}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TouchTextScript : MonoBehaviour
 {
@@ -21,12 +22,22 @@ public class TouchTextScript : MonoBehaviour
 
     private void Update()
     {
-        if (RayCastMainScript.texton1 == false&& RayCastMainScript.laungageon == true&& RayCastMainScript.worksmode == false)
+        if (SceneManager.GetActiveScene().name == "AR_Main")
         {
-            Flick();
+            if (RayCastMainScript.texton1 == false && RayCastMainScript.laungageon == true && RayCastMainScript.worksmode == false)
+            {
+                Flick();
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "AR_Main2")
+        {
+            if (RayCastScript2.texton2 == false && RayCastScript2.laungageon2 == true && RayCastScript2.worksmode2 == false)
+            {
+                Flick();
+            }
         }
 
-        if(rightmode == true)
+        if (rightmode == true)
         {
             if (this.transform.position.x < 0.3f)
             {

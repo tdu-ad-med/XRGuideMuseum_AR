@@ -346,7 +346,6 @@ public class RayCastMainScript : MonoBehaviour
                     cube8.GetComponent<ParticleSystem>().Play();
                     LogSystemScript.GimicLog++;
                     gimic2judment = false;
-
                 }
             }
 

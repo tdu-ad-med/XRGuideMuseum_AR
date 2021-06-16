@@ -145,6 +145,7 @@ public class RayCastScript2 : MonoBehaviour
 
             if (clickedGameObject.tag == "Wave")
             {
+                gimic2judment = true;
                 if (gimic2judment == true)
                 {
                     GameObject cube5 = GameObject.Find("BGM");
@@ -162,6 +163,7 @@ public class RayCastScript2 : MonoBehaviour
                     audioSource.Play();
                     LogSystemScript.GimicLog++;
                     gimic2judment = false;
+                    return;
                 }
             }
 

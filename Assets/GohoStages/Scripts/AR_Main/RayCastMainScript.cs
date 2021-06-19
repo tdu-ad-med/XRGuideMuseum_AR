@@ -175,7 +175,8 @@ public class RayCastMainScript : MonoBehaviour
                     audioSource2.PlayOneShot(sound_Book);
                     LogSystemScript.GimicLog++;
                     worksmode = true;
-
+                    laungageon = true;
+                    texton1 = true;
                     return;
                 }
 
@@ -269,6 +270,7 @@ public class RayCastMainScript : MonoBehaviour
                     cube4.GetComponent<Canvas>().enabled = false;
                     TouchTextScript.count = 0;
                     GameObject.Find("Texton").GetComponent<Renderer>().material.color = Color.white;
+                    laungageon = true;
                     texton1 = false;
                     
                     return;
@@ -304,7 +306,13 @@ public class RayCastMainScript : MonoBehaviour
                     cube3.GetComponent<Canvas>().enabled = true;
                     cube4.GetComponent<Canvas>().enabled = true;
                     laungageon = false;
-
+                    texton1 = true;
+                    worksmode = false;
+                    GameObject cube5 = GameObject.Find("Texter");
+                    GameObject cube6 = GameObject.Find("Navi");
+                    cube5.GetComponent<Canvas>().enabled = false;
+                    cube6.GetComponent<Canvas>().enabled = false;
+                    GameObject.Find("Texton").GetComponent<Renderer>().material.color = Color.gray;
                     return;
 
                     

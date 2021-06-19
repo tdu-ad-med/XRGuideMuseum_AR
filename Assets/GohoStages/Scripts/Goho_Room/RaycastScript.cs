@@ -54,7 +54,7 @@ public class RaycastScript : MonoBehaviour
                         LogSystemScript.WindowLog += 1;
                         WindowJudment = false;
                     }
-                    SceneManager.LoadScene("AR_Sample");
+                    SceneManager.LoadScene("Gohho_World");
                     
                 }
             }
@@ -109,7 +109,7 @@ public class RaycastScript : MonoBehaviour
                     if (clickedGameObject.tag == "windows")
                     {
 
-                        SceneManager.LoadScene("AR_Sample");
+                        SceneManager.LoadScene("Gohho_World");
                     }
                 }
 

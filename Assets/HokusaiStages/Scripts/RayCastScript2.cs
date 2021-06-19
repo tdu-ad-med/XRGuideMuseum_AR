@@ -123,6 +123,8 @@ public class RayCastScript2 : MonoBehaviour
                     audioSource2.PlayOneShot(sound_Book);
                     LogSystemScript.GimicLog++;
                     worksmode2 = true;
+                    laungageon2 = true;
+                    texton2 = true;
                     return;
                 }
 
@@ -140,6 +142,7 @@ public class RayCastScript2 : MonoBehaviour
                 audioSource2.volume = sound_Book_volume;
                 audioSource2.PlayOneShot(sound_Book);
                 worksmode2 = false;
+
                 return;
             }
 
@@ -241,8 +244,9 @@ public class RayCastScript2 : MonoBehaviour
                     cube4.GetComponent<Canvas>().enabled = false;
                     TouchTextScript.count = 0;
                     GameObject.Find("Texton").GetComponent<Renderer>().material.color = Color.white;
+                    laungageon2 = true;
                     texton2 = false;
-
+                    
                     return;
                 }
                 if (texton2 == false)
@@ -273,14 +277,16 @@ public class RayCastScript2 : MonoBehaviour
                 if (laungageon2 == true)
                 {
                     GameObject.Find("laungageon").GetComponent<Renderer>().material.color = Color.white;
-
-                    
+                    texton2 = true;
+                    worksmode2 = false;
                     cube3.GetComponent<Canvas>().enabled = true;
                     cube4.GetComponent<Canvas>().enabled = true;
+                    GameObject cube5 = GameObject.Find("Texter");
+                    GameObject cube6 = GameObject.Find("Navi");
+                    cube5.GetComponent<Canvas>().enabled = false;
+                    cube6.GetComponent<Canvas>().enabled = false;
                     laungageon2 = false;
                     return;
-
-
                 }
 
                 if (laungageon2 == false)
@@ -307,23 +313,6 @@ public class RayCastScript2 : MonoBehaviour
                     SceneManager.LoadScene("AR_Main2");
                 }
             }
-
-            /*
-            if (clickedGameObject.tag == "Wave")
-            {
-
-                if (gimic2judment == true)
-                {
-                    GameObject cube7 = GameObject.Find("particle_1");
-                    GameObject cube8 = GameObject.Find("particle_2");
-                    cube7.GetComponent<ParticleSystem>().Play();
-                    cube8.GetComponent<ParticleSystem>().Play();
-                    LogSystemScript.GimicLog++;
-                    gimic2judment = false;
-
-                }
-            }*/
-
 
         }
     }

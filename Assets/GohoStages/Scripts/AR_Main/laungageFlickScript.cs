@@ -53,6 +53,7 @@ public class laungageFlickScript : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "AR_Main")
             {
                 LaungageBox.GetComponent<RayCastMainScript>().English();
+                
             }
             if (SceneManager.GetActiveScene().name == "AR_Main2")
             {
@@ -64,6 +65,7 @@ public class laungageFlickScript : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "AR_Main")
             {
                 RayCastMainScript.laungageon = true;
+
             }
             if (SceneManager.GetActiveScene().name == "AR_Main2")
             {

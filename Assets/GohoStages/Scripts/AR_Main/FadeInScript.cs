@@ -33,7 +33,7 @@ public class FadeInScript : MonoBehaviour
             }
             if (timer > 5)
             {
-                SceneManager.LoadScene("AR_Sample2");
+                SceneManager.LoadScene("Gohho_Room");
             }
         
         

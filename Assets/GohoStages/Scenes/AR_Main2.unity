@@ -5834,12 +5834,7 @@ PrefabInstance:
     - target: {fileID: 60049095486731487, guid: 989b872793bf646a6b8d3e3c63e20d11,
         type: 3}
       propertyPath: m_Name
-      value: AR Session Origin
+      value: AR Session Origin2
       objectReference: {fileID: 0}
-    - target: {fileID: 81194518482171537, guid: 989b872793bf646a6b8d3e3c63e20d11,
-        type: 3}
-      propertyPath: sound_Wave
-      value: 
-      objectReference: {fileID: 8300000, guid: 431ad234493ee4058b42ead1d18d3117, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 989b872793bf646a6b8d3e3c63e20d11, type: 3}

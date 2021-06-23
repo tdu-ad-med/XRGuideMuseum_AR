@@ -27,6 +27,7 @@ public class RayCastMainScript : MonoBehaviour
     public AudioClip sound_Book;
     //public AudioClip sound_laungage;
     public AudioClip sound_Moon;
+    public AudioClip sound_Wing;
 
 
     //[SerializeField] private GameObject placementPrefab;
@@ -352,6 +353,8 @@ public class RayCastMainScript : MonoBehaviour
                     GameObject cube8 = GameObject.Find("particle_2");
                     cube7.GetComponent<ParticleSystem>().Play();
                     cube8.GetComponent<ParticleSystem>().Play();
+                    audioSource2.volume = sound_moon_volume;
+                    audioSource2.PlayOneShot(sound_Wing);
                     LogSystemScript.GimicLog++;
                     gimic2judment = false;
                 }

@@ -85,6 +85,7 @@ MonoBehaviour:
   sound1_2: {fileID: 8300000, guid: cd2048671ed2c4348affa61389e8843c, type: 3}
   sound_Book: {fileID: 8300000, guid: e811ba8194d684edc8cbad6b9fd2d6b7, type: 3}
   sound_Moon: {fileID: 8300000, guid: b74048e5e17bb49a1bc876ecc9d1cdcf, type: 3}
+  sound_Wing: {fileID: 8300000, guid: 69694aab93f8148ad81c63c154bef009, type: 3}
   arCamera: {fileID: 8499457882496783651}
   raycastManager: {fileID: 8499457882486312900}
 --- !u!114 &8499457882486312900

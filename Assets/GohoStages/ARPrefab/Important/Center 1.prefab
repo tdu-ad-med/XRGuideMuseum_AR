@@ -1792,6 +1792,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cloud_2
       objectReference: {fileID: 0}
+    - target: {fileID: 5094398387108308268, guid: 80066806548964b87bb2d75ccba75197,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wave
+      objectReference: {fileID: 0}
     - target: {fileID: 5094398387108308278, guid: 80066806548964b87bb2d75ccba75197,
         type: 3}
       propertyPath: m_RootOrder

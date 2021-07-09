@@ -8,7 +8,7 @@ public class BlinkingScript : MonoBehaviour
 
     static public float alfa;
     float red, green, blue;    //RGBを操作するための変数
-    float speed = 3.0f;
+    float speed = 2.0f;
     float center = 0.5f;
     // Start is called before the first frame update
     void Start()

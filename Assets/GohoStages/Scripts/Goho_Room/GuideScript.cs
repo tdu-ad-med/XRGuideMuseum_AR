@@ -34,8 +34,6 @@ public class GuideScript : MonoBehaviour
     public GameObject textGuide;
     public GameObject laungages;
 
-    float timer = 0;
-    public GameObject Under;
 
     //UI表示非表示の判定
     bool laungageon = true;
@@ -95,13 +93,6 @@ public class GuideScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        timer += Time.deltaTime;
-        if (timer > 10.0f)
-        {
-            
-            Under.SetActive(true);
-        }
 
     }
 

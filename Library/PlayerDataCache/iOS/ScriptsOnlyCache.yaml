@@ -1087,7 +1087,7 @@ ScriptsOnlyBuild:
     className: ARPointCloudMeshVisualizer
   - hash:
       serializedVersion: 2
-      Hash: fd67d4409396a6571e76fbe3c6459c36
+      Hash: 36ef52fccb585946f6e25e96d7680ea8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GuideScript

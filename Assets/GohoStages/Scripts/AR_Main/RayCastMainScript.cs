@@ -206,6 +206,8 @@ public class RayCastMainScript : MonoBehaviour
                 {
                     GameObject cube5 = GameObject.Find("Theotext");
                     cube5.GetComponent<Canvas>().enabled = true;
+                    audioSource2.volume = sound_Book_volume;
+                    audioSource2.PlayOneShot(sound_Book);
                     LogSystemScript.GimicLog++;
                     gimic3judment = false;
                 }

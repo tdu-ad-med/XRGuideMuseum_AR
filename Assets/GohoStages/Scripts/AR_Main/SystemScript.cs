@@ -16,6 +16,7 @@ public class SystemScript : MonoBehaviour
     public GameObject Edit;
     public GameObject Secretbutton;
 
+
     [Header("日本語英語それぞれ切り替える際のテキスト")]
     public Text marker;
     public Text title;
@@ -24,12 +25,12 @@ public class SystemScript : MonoBehaviour
     public Text title_2;
     public Text Artist_2;
 
+
     [Header("ボタン")]
     public GameObject Button;//「この世界に行く」のボタン
     public GameObject btn;//設定画面の、英語のボタン部分
     public GameObject btn2;//設定画面の、日本語のボタン部分
-    [Header("フェード専用のホワイトボード")]
-    public GameObject WhiteBoard;
+
 
     
     AudioSource audioSource;
@@ -63,7 +64,6 @@ public class SystemScript : MonoBehaviour
             Japanese();
             audioSource.Stop();
         }
-
 
 
         //btnj = btn.GetComponent<Button>();
@@ -169,16 +169,12 @@ public class SystemScript : MonoBehaviour
         Final = true;
         audioSource.PlayOneShot(sound1);
         
-        if (UIScript.AROn == false)
-        {
-            WhiteBoard.SetActive(true);
-
-        }
-        if (UIScript.AROn == true && FlagScript.flag == false)
+       
+        if (FlagScript.flag == false)
         {
             ARStart = true; 
         }
-        if (UIScript.AROn == true && FlagScript_2.flag_2 == false)
+        if (FlagScript_2.flag_2 == false)
         {
             ARStart_2 = true;
         }
@@ -205,5 +201,6 @@ public class SystemScript : MonoBehaviour
             SceneManager.LoadScene("AR_Main");
         }
     }
+
 
 }

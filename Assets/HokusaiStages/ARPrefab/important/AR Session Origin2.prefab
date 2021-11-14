@@ -133,10 +133,9 @@ GameObject:
   - component: {fileID: 60049095486731789}
   - component: {fileID: 60049095486731791}
   - component: {fileID: 60049095486731770}
-  - component: {fileID: 60049095486731784}
   - component: {fileID: 81194518482171537}
   m_Layer: 0
-  m_Name: AR Session Origin
+  m_Name: AR Session Origin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,8 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RaycastPrefab: {fileID: 5129807230322133091, guid: c245e4e3425a941bd81cd4ec1dfaad05,
-    type: 3}
+  m_RaycastPrefab: {fileID: 0}
 --- !u!82 &60049095486731770
 AudioSource:
   m_ObjectHideFlags: 0
@@ -297,21 +295,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &60049095486731784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60049095486731487}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79a698d75d874e3cba4512c60a9a6e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectsToPlace:
-  - {fileID: 8469420295891158464, guid: 6708c72a87d9b42dc8d357eb7ac66797, type: 3}
-  - {fileID: 4021705609589334189, guid: 52a457380b3e449668601526c6c545cd, type: 3}
 --- !u!114 &81194518482171537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,9 +307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bdcddec9ba4e4d8cb22694190d758d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 8300000, guid: a11f5e19bb9784da4a2ca07224a1260f, type: 3}
-  sound1_2: {fileID: 8300000, guid: 2a792c23fb7f54326ac026eb9eb7fda5, type: 3}
+  sound1_2: {fileID: 8300000, guid: e0adecbedc5194d04b8ab7d5a034c81b, type: 3}
   sound_Book: {fileID: 8300000, guid: e811ba8194d684edc8cbad6b9fd2d6b7, type: 3}
   sound_Wave: {fileID: 8300000, guid: 431ad234493ee4058b42ead1d18d3117, type: 3}
   arCamera: {fileID: 60049095486731413}
   raycastManager: {fileID: 60049095486731791}
+  mat1: {fileID: 2100000, guid: 8f3f3394b99ae43e8929afcac1f2d886, type: 2}
+  mat2: {fileID: 2100000, guid: 3cf5f9dc6b1db497b8779d5c5171e079, type: 2}

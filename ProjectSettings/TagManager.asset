@@ -19,6 +19,8 @@ TagManager:
   - Brother
   - Workmode
   - Wave
+  - Back2
+  - Editor
   layers:
   - Default
   - TransparentFX

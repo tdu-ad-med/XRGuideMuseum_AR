@@ -21,15 +21,17 @@ public class FlagScript : MonoBehaviour
 
     void Update()
     {
-        if (SystemScript.ARStart == true)
+        if (SystemScript.ARStart == true&& count == 0)
         {
-            if (count == 0)
-            {
+
                 AR_GameObject2 = Instantiate(AR_GameObject, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
                 AR_GameObject2.transform.parent = this.gameObject.transform;
-                count = 1;
+                GameObject cube7 = GameObject.Find("particle_1");
+                cube7.GetComponent<ParticleSystem>().Stop();
+                GameObject cube8 = GameObject.Find("particle_2");
+                cube8.GetComponent<ParticleSystem>().Stop();
+            count = 1;
 
-            }
         }
 
     }

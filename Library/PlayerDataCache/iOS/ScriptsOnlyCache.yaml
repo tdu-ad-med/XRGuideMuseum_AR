@@ -1,28 +1,31 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-firstpass.dll:
+    - ShareScript
     Assembly-CSharp.dll:
     - BlinkingScript
     - FadeInScript
-    - FadeOutScript
     - FlagScript
     - FlagScript_2
-    - GuideScript
-    - ImageTrackerManager
-    - JairoScript
+    - GohoTimerScript
+    - InputTextScript
     - LogSystemScript
     - MaterialChangeScript
-    - OutlinePostEffect
     - RayCastMainScript
     - RayCastScript2
-    - RaycastScript
     - RotationScript
     - SystemScript
-    - TouchMenuScript
     - TouchTextScript
     - UIScript
-    - laungageFlickScript
+    LunarConsole.dll:
+    - LunarConsolePlugin.LunarConsole
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.Timeline.dll:
+    - UnityEngine.Timeline.ControlPlayableAsset
+    - UnityEngine.Timeline.ControlTrack
+    - UnityEngine.Timeline.MarkerTrack
+    - UnityEngine.Timeline.TimelineAsset
     Unity.XR.ARFoundation.dll:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
@@ -43,6 +46,12 @@ ScriptsOnlyBuild:
     Unity.XR.Management.dll:
     - UnityEngine.XR.Management.XRGeneralSettings
     - UnityEngine.XR.Management.XRManagerSettings
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -54,8 +63,70 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/CommunicationSystem/Communication.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11988}
+    - Class: 114
+      Script: {instanceID: 11990}
+    - Class: 114
+      Script: {instanceID: 11992}
+    - Class: 114
+      Script: {instanceID: 11994}
+    - Class: 114
+      Script: {instanceID: 11996}
+    - Class: 114
+      Script: {instanceID: 12946}
+    - Class: 114
+      Script: {instanceID: 13206}
+    - Class: 114
+      Script: {instanceID: 13538}
+    - Class: 114
+      Script: {instanceID: 13908}
+    - Class: 114
+      Script: {instanceID: 14862}
+    - Class: 114
+      Script: {instanceID: 14880}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
     Assets/GohoStages/Scenes/AR_Main.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -74,8 +145,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
@@ -100,67 +169,67 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11738}
+      Script: {instanceID: 11988}
     - Class: 114
-      Script: {instanceID: 11740}
+      Script: {instanceID: 11990}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11994}
     - Class: 114
-      Script: {instanceID: 11746}
+      Script: {instanceID: 11996}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 12046}
     - Class: 114
-      Script: {instanceID: 11832}
+      Script: {instanceID: 12096}
     - Class: 114
-      Script: {instanceID: 11890}
-    - Class: 114
-      Script: {instanceID: 12078}
+      Script: {instanceID: 12170}
     - Class: 114
       Script: {instanceID: 12376}
     - Class: 114
-      Script: {instanceID: 12568}
+      Script: {instanceID: 12940}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12946}
     - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 12952}
     - Class: 114
-      Script: {instanceID: 12830}
+      Script: {instanceID: 13028}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 12926}
+      Script: {instanceID: 13230}
     - Class: 114
-      Script: {instanceID: 12964}
+      Script: {instanceID: 13376}
     - Class: 114
-      Script: {instanceID: 13070}
+      Script: {instanceID: 13504}
     - Class: 114
-      Script: {instanceID: 13358}
+      Script: {instanceID: 13538}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13828}
     - Class: 114
-      Script: {instanceID: 13612}
+      Script: {instanceID: 13938}
     - Class: 114
-      Script: {instanceID: 13674}
+      Script: {instanceID: 14060}
     - Class: 114
-      Script: {instanceID: 13688}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 13706}
+      Script: {instanceID: 14182}
     - Class: 114
-      Script: {instanceID: 13852}
+      Script: {instanceID: 14198}
     - Class: 114
-      Script: {instanceID: 13914}
+      Script: {instanceID: 14214}
     - Class: 114
-      Script: {instanceID: 14010}
+      Script: {instanceID: 14376}
     - Class: 114
-      Script: {instanceID: 14048}
+      Script: {instanceID: 14538}
     - Class: 114
-      Script: {instanceID: 14190}
+      Script: {instanceID: 14582}
     - Class: 114
-      Script: {instanceID: 14230}
+      Script: {instanceID: 14740}
     - Class: 114
-      Script: {instanceID: 14310}
+      Script: {instanceID: 14780}
+    - Class: 114
+      Script: {instanceID: 14862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -182,6 +251,8 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 258
+      Script: {instanceID: 0}
+    - Class: 320
       Script: {instanceID: 0}
     Assets/GohoStages/Scenes/AR_Main2.unity:
     - Class: 1
@@ -227,67 +298,59 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11738}
+      Script: {instanceID: 11988}
     - Class: 114
-      Script: {instanceID: 11740}
+      Script: {instanceID: 11990}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11994}
     - Class: 114
-      Script: {instanceID: 11746}
+      Script: {instanceID: 11996}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 12046}
     - Class: 114
-      Script: {instanceID: 11832}
-    - Class: 114
-      Script: {instanceID: 11890}
-    - Class: 114
-      Script: {instanceID: 12078}
+      Script: {instanceID: 12170}
     - Class: 114
       Script: {instanceID: 12376}
     - Class: 114
-      Script: {instanceID: 12568}
+      Script: {instanceID: 12726}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12940}
     - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 12946}
     - Class: 114
-      Script: {instanceID: 12830}
+      Script: {instanceID: 13230}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 13332}
     - Class: 114
-      Script: {instanceID: 12926}
+      Script: {instanceID: 13504}
     - Class: 114
-      Script: {instanceID: 12964}
+      Script: {instanceID: 13538}
     - Class: 114
-      Script: {instanceID: 13070}
+      Script: {instanceID: 13828}
     - Class: 114
-      Script: {instanceID: 13358}
+      Script: {instanceID: 13938}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 13612}
+      Script: {instanceID: 14182}
     - Class: 114
-      Script: {instanceID: 13674}
+      Script: {instanceID: 14198}
     - Class: 114
-      Script: {instanceID: 13688}
+      Script: {instanceID: 14214}
     - Class: 114
-      Script: {instanceID: 13706}
+      Script: {instanceID: 14376}
     - Class: 114
-      Script: {instanceID: 13852}
+      Script: {instanceID: 14442}
     - Class: 114
-      Script: {instanceID: 13914}
+      Script: {instanceID: 14582}
     - Class: 114
-      Script: {instanceID: 14010}
+      Script: {instanceID: 14740}
     - Class: 114
-      Script: {instanceID: 14048}
+      Script: {instanceID: 14780}
     - Class: 114
-      Script: {instanceID: 14190}
-    - Class: 114
-      Script: {instanceID: 14230}
-    - Class: 114
-      Script: {instanceID: 14310}
+      Script: {instanceID: 14862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -310,139 +373,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
-    Assets/GohoStages/Scenes/Gohho_Room.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11738}
-    - Class: 114
-      Script: {instanceID: 11740}
-    - Class: 114
-      Script: {instanceID: 11742}
-    - Class: 114
-      Script: {instanceID: 11744}
-    - Class: 114
-      Script: {instanceID: 11746}
-    - Class: 114
-      Script: {instanceID: 11922}
-    - Class: 114
-      Script: {instanceID: 12480}
-    - Class: 114
-      Script: {instanceID: 12574}
-    - Class: 114
-      Script: {instanceID: 13674}
-    - Class: 114
-      Script: {instanceID: 13926}
-    - Class: 114
-      Script: {instanceID: 13954}
-    - Class: 114
-      Script: {instanceID: 14310}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 258
-      Script: {instanceID: 0}
-    Assets/GohoStages/Scenes/Gohho_World.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11738}
-    - Class: 114
-      Script: {instanceID: 11742}
-    - Class: 114
-      Script: {instanceID: 11744}
-    - Class: 114
-      Script: {instanceID: 11746}
-    - Class: 114
-      Script: {instanceID: 12332}
-    - Class: 114
-      Script: {instanceID: 12480}
-    - Class: 114
-      Script: {instanceID: 12574}
-    - Class: 114
-      Script: {instanceID: 14310}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 4bc4346a71a8df53a6b106f68ef3a190
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
@@ -455,12 +392,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
-  - hash:
-      serializedVersion: 2
-      Hash: 4bc4346a71a8df53a6b106f68ef3a190
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: 5f1752ed2092162f016c19510c28a8b9
@@ -521,12 +452,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 01d1f5b1913596a84a672d8060779418
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RaycastScript
   - hash:
       serializedVersion: 2
       Hash: 04e4a8b0447477cc4e933d9e5311188f
@@ -655,12 +580,6 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: JairoScript
-  - hash:
-      serializedVersion: 2
       Hash: 290afc8da8e459e0b8dc7444bfaf5e35
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -715,7 +634,7 @@ ScriptsOnlyBuild:
     className: ARPlane
   - hash:
       serializedVersion: 2
-      Hash: 4be518beb2baae5d7f445bfb71bc78bb
+      Hash: 54f215ebbd4978d980ead3edf468bbd9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MaterialChangeScript
@@ -763,13 +682,19 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 227a3d8968bb3326cf22f13f6db35640
+    assemblyName: LunarConsole.dll
+    namespaceName: LunarConsolePluginInternal
+    className: LunarConsoleAction
+  - hash:
+      serializedVersion: 2
       Hash: 1268406d3f2e4b2c2b670b560b6db769
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: AREnvironmentProbeManager
   - hash:
       serializedVersion: 2
-      Hash: 6f61f9bbd4cc07614b6dc15811139316
+      Hash: 8b35c7a2977bf2dac1f5a7c9809de47e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RayCastMainScript
@@ -779,6 +704,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARParticipant
+  - hash:
+      serializedVersion: 2
+      Hash: dd07b17038ebcad27f14e517325207c9
+    assemblyName: LunarConsole.dll
+    namespaceName: LunarConsolePluginInternal
+    className: LunarConsoleLegacyActions
+  - hash:
+      serializedVersion: 2
+      Hash: d953f1a0af8593b68e113fdc05a60105
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InputTextScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -805,7 +742,7 @@ ScriptsOnlyBuild:
     className: ARBackgroundRendererFeature
   - hash:
       serializedVersion: 2
-      Hash: 0dc3fe5384b5f23b9da5cce20b0be84c
+      Hash: 48a281a6da8b7fdab68d8597eee4977f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIScript
@@ -859,7 +796,7 @@ ScriptsOnlyBuild:
     className: ARPointCloud
   - hash:
       serializedVersion: 2
-      Hash: 7b1bcc699e6703009c6e06079d9d9ba7
+      Hash: 56391f00319a1737e9ca342b842f6465
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SystemScript
@@ -869,6 +806,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: 8c6933f891e37a1646aa495e3c2f1c28
+    assemblyName: LunarConsole.dll
+    namespaceName: LunarConsolePlugin
+    className: LunarConsole
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -881,6 +824,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 94e759e01d3d2f301a29b350565d0938
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScrollScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1000,6 +949,12 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: GohoTimerScript
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: BlinkingScript
   - hash:
       serializedVersion: 2
@@ -1063,16 +1018,10 @@ ScriptsOnlyBuild:
     className: AROcclusionManager
   - hash:
       serializedVersion: 2
-      Hash: fdab619b9239727960cfe4e43276e3a5
+      Hash: 3a5925e524f3614866188d2a9f08f689
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RayCastScript2
-  - hash:
-      serializedVersion: 2
-      Hash: 9d9e3a7981787e0d23d6c954781d7643
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: OutlinePostEffect
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1085,12 +1034,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARPointCloudMeshVisualizer
-  - hash:
-      serializedVersion: 2
-      Hash: 36ef52fccb585946f6e25e96d7680ea8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GuideScript
   - hash:
       serializedVersion: 2
       Hash: 290afc8da8e459e0b8dc7444bfaf5e35
@@ -1109,12 +1052,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
-  - hash:
-      serializedVersion: 2
-      Hash: c60023b8b5011d16686aa7076ebfca47
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ImageTrackerManager
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
@@ -1157,12 +1094,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
-  - hash:
-      serializedVersion: 2
-      Hash: abf63bc14eb945dddb514e0e238437f5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ARGuideSystemScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1243,6 +1174,12 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: b944f4c2a0e760d1a21e090df88ddbb8
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: ShareScript
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1269,6 +1206,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/GohoStages/Scenes/AR_Main.unity
   - Assets/GohoStages/Scenes/AR_Main2.unity
-  - Assets/GohoStages/Scenes/Gohho_World.unity
-  - Assets/GohoStages/Scenes/Gohho_Room.unity
-  playerPath: /Users/yamashitaayane/Documents/ARImage3
+  - Assets/CommunicationSystem/Communication.unity
+  playerPath: /Users/yamashitaayane/Documents/ARImage5

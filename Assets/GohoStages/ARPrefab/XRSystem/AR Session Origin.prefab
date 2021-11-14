@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8499457882486312901}
   - component: {fileID: 8499457882486312900}
   - component: {fileID: 8499457882486312899}
-  - component: {fileID: 8499457882006838248}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -81,13 +80,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoonObject: {fileID: 8302024962229803084, guid: 6fc62b7bfe1b84b9b9ebb143bc8635b0,
     type: 3}
-  sound1: {fileID: 8300000, guid: d80df3dc34fd64b5da47d4f952a075ee, type: 3}
-  sound1_2: {fileID: 8300000, guid: cd2048671ed2c4348affa61389e8843c, type: 3}
+  sound1_2: {fileID: 8300000, guid: 78db06d2e337f497c8d5145082e0eaf8, type: 3}
   sound_Book: {fileID: 8300000, guid: e811ba8194d684edc8cbad6b9fd2d6b7, type: 3}
   sound_Moon: {fileID: 8300000, guid: b74048e5e17bb49a1bc876ecc9d1cdcf, type: 3}
   sound_Wing: {fileID: 8300000, guid: fc996af061a1543809912cda24001e61, type: 3}
   arCamera: {fileID: 8499457882496783651}
   raycastManager: {fileID: 8499457882486312900}
+  mat1: {fileID: 2100000, guid: 8f3f3394b99ae43e8929afcac1f2d886, type: 2}
+  mat2: {fileID: 2100000, guid: 3cf5f9dc6b1db497b8779d5c5171e079, type: 2}
 --- !u!114 &8499457882486312900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,8 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RaycastPrefab: {fileID: 5129807230322133091, guid: c245e4e3425a941bd81cd4ec1dfaad05,
-    type: 3}
+  m_RaycastPrefab: {fileID: 0}
 --- !u!82 &8499457882486312899
 AudioSource:
   m_ObjectHideFlags: 0
@@ -198,21 +197,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8499457882006838248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499457882486312952}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79a698d75d874e3cba4512c60a9a6e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectsToPlace:
-  - {fileID: 8469420295891158464, guid: 6708c72a87d9b42dc8d357eb7ac66797, type: 3}
-  - {fileID: 4021705609589334189, guid: 52a457380b3e449668601526c6c545cd, type: 3}
 --- !u!1 &8499457882496783650
 GameObject:
   m_ObjectHideFlags: 0

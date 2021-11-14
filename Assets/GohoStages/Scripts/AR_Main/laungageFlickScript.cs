@@ -52,12 +52,12 @@ public class laungageFlickScript : MonoBehaviour
             cube4.GetComponent<Canvas>().enabled = false;
             if (SceneManager.GetActiveScene().name == "AR_Main")
             {
-                LaungageBox.GetComponent<RayCastMainScript>().English();
+                //LaungageBox.GetComponent<RayCastMainScript>().English();
                 
             }
             if (SceneManager.GetActiveScene().name == "AR_Main2")
             {
-                LaungageBox2.GetComponent<RayCastScript2>().English();
+              //  LaungageBox2.GetComponent<RayCastScript2>().English();
             }
             audioSource2.volume = laungagevolume;
             audioSource2.PlayOneShot(sound_laungage);
@@ -86,11 +86,11 @@ public class laungageFlickScript : MonoBehaviour
             cube4.GetComponent<Canvas>().enabled = false;
             if (SceneManager.GetActiveScene().name == "AR_Main")
             {
-                LaungageBox.GetComponent<RayCastMainScript>().Japanese();
+                //LaungageBox.GetComponent<RayCastMainScript>().Japanese();
             }
             if (SceneManager.GetActiveScene().name == "AR_Main2")
             {
-                LaungageBox2.GetComponent<RayCastScript2>().Japanese();
+                //LaungageBox2.GetComponent<RayCastScript2>().Japanese();
             }
 
             audioSource2.volume = laungagevolume;

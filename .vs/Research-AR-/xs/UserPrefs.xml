@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{354A5268-3E7A-C10C-A9F2-3DD8E945231C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GohoStages/Scripts/AR_Main/BlinkingScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GohoStages/Scripts/AR_Main/RayCastMainScript.cs">
     <Files>
-      <File FileName="Assets/GohoStages/Scripts/AR_Main/BlinkingScript.cs" Line="11" Column="20" />
-      <File FileName="Assets/GohoStages/Scripts/Goho_Room/GuideScript.cs" Line="91" Column="6" />
+      <File FileName="Assets/GohoStages/Scripts/AR_Main/RayCastMainScript.cs" Line="60" Column="6" />
+      <File FileName="Assets/GohoStages/Scripts/Goho_Room/GuideScript.cs" Line="96" Column="1" />
+      <File FileName="Assets/GohoStages/Scripts/Goho_Room/RaycastScript.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="228ca0f8-e5dc-4fa1-9652-058cf0c1b358" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="69935936-8934-4a22-9404-6e6981478f90" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

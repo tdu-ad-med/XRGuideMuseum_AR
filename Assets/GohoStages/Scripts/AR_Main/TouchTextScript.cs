@@ -18,7 +18,7 @@ public class TouchTextScript : MonoBehaviour
 
     Vector3 rightpos;
 
-    static public int count = 0;//フリックするといった示唆をしているアイコンを一回表示にするために使うもの
+    //static public int count = 0;//フリックするといった示唆をしているアイコンを一回表示にするために使うもの
 
     private void Update()
     {
@@ -54,14 +54,6 @@ public class TouchTextScript : MonoBehaviour
                 }
             }
 
-            if (count == 0)
-            {
-                GameObject cube2 = GameObject.Find("Navi");
-                cube2.GetComponent<Canvas>().enabled = false;
-
-
-                count++;
-            }
         }
         if (leftmode == true)
         {
@@ -79,14 +71,6 @@ public class TouchTextScript : MonoBehaviour
                 }
             }
 
-            if (count == 0)
-            {
-                GameObject cube2 = GameObject.Find("Navi");
-                cube2.GetComponent<Canvas>().enabled = false;
-                
-
-                count++;
-            }
         }
 
         if (upmode == true)
@@ -106,14 +90,7 @@ public class TouchTextScript : MonoBehaviour
                 }
             }
             
-            if (count == 0)
-            {
-                GameObject cube2 = GameObject.Find("Navi");
-                cube2.GetComponent<Canvas>().enabled = false;
 
-
-                count++;
-            }
         }
 
         if (downmode == true)
@@ -132,14 +109,7 @@ public class TouchTextScript : MonoBehaviour
                 }
             }
             
-            if (count == 0)
-            {
-                GameObject cube2 = GameObject.Find("Navi");
-                cube2.GetComponent<Canvas>().enabled = false;
 
-
-                count++;
-            }
         }
 
     }

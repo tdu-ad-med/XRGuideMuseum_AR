@@ -12,10 +12,13 @@ EditorBuildSettings:
     path: Assets/GohoStages/Scenes/AR_Main2.unity
     guid: 046a0072a39454dad999f8903048ce7e
   - enabled: 1
-    path: Assets/GohoStages/Scenes/Gohho_World.unity
+    path: Assets/CommunicationSystem/Communication.unity
+    guid: 14eed7873544247889f2d36640f35bd1
+  - enabled: 0
+    path: 
     guid: 2b22df61590a14076a0c552c828f25ac
-  - enabled: 1
-    path: Assets/GohoStages/Scenes/Gohho_Room.unity
+  - enabled: 0
+    path: 
     guid: 847872dc3df0a48dca0c94e23c06b408
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 62224f1ec3a5a419798942dd893b8baa,

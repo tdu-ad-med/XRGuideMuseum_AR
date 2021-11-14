@@ -27,6 +27,14 @@ public class FlagScript_2 : MonoBehaviour
             {
                 AR_GameObject2 = Instantiate(AR_GameObject, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
                 AR_GameObject2.transform.parent = this.gameObject.transform;
+                GameObject cube7 = GameObject.Find("WaveAnimation");
+                cube7.GetComponent<ParticleSystem>().Stop();
+                GameObject cube8 = GameObject.Find("WaveAnimation2");
+                cube8.GetComponent<ParticleSystem>().Stop();
+                GameObject cube9 = GameObject.Find("Splash");
+                cube9.GetComponent<ParticleSystem>().Stop();
+                GameObject cube10 = GameObject.Find("Splash2");
+                cube10.GetComponent<ParticleSystem>().Stop();
                 count = 1;
             }
         }

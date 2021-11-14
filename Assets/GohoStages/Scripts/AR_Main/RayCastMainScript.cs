@@ -6,13 +6,14 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.SceneManagement;
 
+
 public class RayCastMainScript : MonoBehaviour
 {
-    GameObject clickedGameObject;
+    GameObject clickedGameObject=null;
 
     public GameObject MoonObject;
 
-    bool voiceon = true;
+    //bool voiceon = true;
     static public bool texton1 = true;
     static public bool laungageon = true;
 
@@ -20,9 +21,10 @@ public class RayCastMainScript : MonoBehaviour
 
     AudioSource audioSource2;
     [Header("英語ガイドボイス")]
-    public AudioClip sound1;//English
+    //public AudioClip sound1;//English
     [Header("日本語ガイドボイス")]
     public AudioClip sound1_2;//japanese
+
     [Header("SE")]
     public AudioClip sound_Book;
     //public AudioClip sound_laungage;
@@ -39,101 +41,45 @@ public class RayCastMainScript : MonoBehaviour
     //ログ用のbool関数,一回判定するbool関数
     bool gimicJudgment =true;
     bool TextJudment = true;
-    bool VoiceJudment = true;
-    bool laungageJudment =true;
+
+    //bool laungageJudment =true;
     bool gimic2judment = true;
     bool gimic3judment = true;
-    //AR起動したとき、日本語版と英語版が設定から反映するときに、一回処理する
-    int count = 0;
+    bool communicatejudment = true;
+
     //音量調節
-    float sound_japanese_volume = 1.0f;
-    float sound_English_volume = 0.5f;
+    //float sound_japanese_volume = 1.0f;
+    //float sound_English_volume = 0.5f;
     float sound_Book_volume = 0.5f;
     float sound_moon_volume = 1.0f;
+
+    public Material mat1;//再生ボタン
+    public Material mat2;//停止ボタン
+
+    private Coroutine _currentCoroutine;
+
+    [Header("時間計測")]
+    static public bool timer_GohoMOvieJudgment = false;
+    static public bool timer_GohoAnotherWorkjudgment = false;
+    static public bool timer_GohoCommunicationjudgment = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         audioSource2 = GetComponent<AudioSource>();
-
+        
     }
 
-    public void Japanese()
-    {
-        GameObject cube7 = GameObject.Find("Worktext1");
-        GameObject cube8 = GameObject.Find("Workmode1");
-        if (MaterialChangeScript.i == 0)
-        {
-            cube7.GetComponent<Text>().text = "花咲くアーモンドの枝";
-        }
-        if (MaterialChangeScript.i == 1)
-        {
-            cube7.GetComponent<Text>().text = "アイリス";
-        }
-        if (MaterialChangeScript.i == 2)
-        {
-            cube7.GetComponent<Text>().text = "薔薇";
-        }
-        cube8.GetComponent<Text>().text = "戻る";
-
-        GameObject cube5 = GameObject.Find("Text");
-        GameObject cube6 = GameObject.Find("Theotext1");
-
-        cube5.GetComponent<Text>().text = "サン＝レミのサン＝ポール療養院にゴッホが入院しているときに、窓から見える村の風景を描いたもの.天と地を接続している糸杉は、一般的に天国と関連して、死の架け橋の象徴とみなされている.また,ゴッホの過去の記憶がコラージュ的に表現されており現実的風景ではない.";
-        cube6.GetComponent<Text>().text = "親愛なる弟　テオ";
-    }
-    public void English()
-    {
-        GameObject cube7 = GameObject.Find("Worktext1");
-        GameObject cube8 = GameObject.Find("Workmode1");
-
-        if (MaterialChangeScript.i == 0)
-        {
-            cube7.GetComponent<Text>().text = "Almond Blossoms";
-        }
-        if (MaterialChangeScript.i == 1)
-        {
-            cube7.GetComponent<Text>().text = "Iris";
-        }
-        if (MaterialChangeScript.i == 2)
-        {
-            cube7.GetComponent<Text>().text = "Rose";
-        }
-        cube8.GetComponent<Text>().text = "back";
-
-        GameObject cube5 = GameObject.Find("Text");
-        GameObject cube6 = GameObject.Find("Theotext1");
-
-        cube5.GetComponent<Text>().text = "A picture of the village landscape seen through a window when Van Gogh was admitted to the Saint-Paul sanatorium in Saint-Remy. The cypress that connects heaven and earth is generally associated with heaven and died. It is regarded as a symbol of the bridge, and Van Gogh's past memories are expressed in a collage, which is not a realistic landscape.";
-        cube6.GetComponent<Text>().text = "Dear MyBrother Theo";
-    }
+  
 
     // Update is called once per frame
     void Update()
     {
+        
 
-        if (SystemScript.ARStart == true)
-        {
-            if (count == 0)
-            {
-                GameObject cube7 =GameObject.Find("particle_1");
-                cube7.GetComponent<ParticleSystem>().Stop();
-                GameObject cube8 = GameObject.Find("particle_2");
-                cube8.GetComponent<ParticleSystem>().Stop();
-                if (SystemScript.japan == true)
-                {
-                    Japanese();
-                }
-                if (SystemScript.japan == false)
-                {
-                    English();
-                }
-                count = 1;
-            }
-        }
 
-        if (Input.touchCount <= 0) return;
+            if (Input.touchCount <= 0) return;
 
         var touch = Input.GetTouch(0);
         if (touch.phase == TouchPhase.Began)
@@ -143,227 +89,338 @@ public class RayCastMainScript : MonoBehaviour
             
 
             RaycastHit hit = new RaycastHit();
-            clickedGameObject = null;
+            //clickedGameObject = null;
             if (Physics.Raycast(ray, out hit))
             {
-                clickedGameObject = hit.collider.gameObject;
-                
-            }
-            if (clickedGameObject.tag == "Moon")
-            {
-                if (gimicJudgment == true)
+                if (hit.collider != null)
                 {
-                    clickedGameObject.GetComponent<Animator>().SetBool("MoonOn", true);
-                    LogSystemScript.GimicLog += 1;
-                    audioSource2.volume = sound_moon_volume;
-                    audioSource2.PlayOneShot(sound_Moon);
-                    gimicJudgment = false;
+                    clickedGameObject = hit.collider.gameObject;
                 }
 
-            }
 
-            if (clickedGameObject.tag == "Works")
-            {
-                if (worksmode == false)
+            }
+                if (hit.collider != null&&clickedGameObject.tag == "Moon")
+                {
+                    if (gimicJudgment == true)
+                    {
+                        clickedGameObject.GetComponent<Animator>().SetBool("MoonOn", true);
+                        LogSystemScript.GimicLog += 1;
+                        audioSource2.volume = sound_moon_volume;
+                        audioSource2.PlayOneShot(sound_Moon);
+                        gimicJudgment = false;
+                    }
+
+                }
+
+                if (hit.collider != null && clickedGameObject.tag == "Works")
+                {
+                    if (worksmode == false)
+                    {
+                        GameObject cube5 = GameObject.Find("Worktext");
+                        GameObject cube6 = GameObject.Find("Workmode");
+                        GameObject cube7 = GameObject.Find("WorkMove");
+                        cube6.GetComponent<Canvas>().enabled = true;
+                        cube5.GetComponent<Canvas>().enabled = true;
+                        cube7.GetComponent<Canvas>().enabled = true;
+                        audioSource2.volume = sound_Book_volume;
+                        audioSource2.PlayOneShot(sound_Book);
+                        LogSystemScript.VoiceLog++;
+                        timer_GohoAnotherWorkjudgment = true;
+                        worksmode = true;
+                        laungageon = true;
+                        texton1 = true;
+                        return;
+                    }
+
+
+                }
+                if (hit.collider != null && clickedGameObject.tag == "Workmode")
                 {
                     GameObject cube5 = GameObject.Find("Worktext");
                     GameObject cube6 = GameObject.Find("Workmode");
                     GameObject cube7 = GameObject.Find("WorkMove");
-                    cube6.GetComponent<Canvas>().enabled = true;
-                    cube5.GetComponent<Canvas>().enabled = true;
-                    cube7.GetComponent<Canvas>().enabled = true;
+                    cube6.GetComponent<Canvas>().enabled = false;
+                    cube5.GetComponent<Canvas>().enabled = false;
+                    cube7.GetComponent<Canvas>().enabled = false;
+                    timer_GohoAnotherWorkjudgment = false;
+                    Debug.Log("ゴッホの他の作品の鑑賞時間" + GohoTimerScript.timer_GohoAnotherWork.ToString("f0") + "秒");
+                    GohoTimerScript.timer_GohoAnotherWork = 0;
+                    worksmode = false;
                     audioSource2.volume = sound_Book_volume;
                     audioSource2.PlayOneShot(sound_Book);
-                    LogSystemScript.GimicLog++;
-                    worksmode = true;
-                    laungageon = true;
-                    texton1 = true;
+
                     return;
+
+
                 }
 
-
-            }
-            if (clickedGameObject.tag == "Workmode")
-            {
-                GameObject cube5 = GameObject.Find("Worktext");
-                GameObject cube6 = GameObject.Find("Workmode");
-                GameObject cube7 = GameObject.Find("WorkMove");
-                cube6.GetComponent<Canvas>().enabled = false;
-                cube5.GetComponent<Canvas>().enabled = false;
-                cube7.GetComponent<Canvas>().enabled = false;
-                worksmode = false;
-                audioSource2.volume = sound_Book_volume;
-                audioSource2.PlayOneShot(sound_Book);
-
-                return;
-
-
-            }
-
-            if (clickedGameObject.tag == "Brother")
-            {
-                if (gimic3judment == true)
+                if (hit.collider != null && clickedGameObject.tag == "Brother")
                 {
-                    GameObject cube5 = GameObject.Find("Theotext");
-                    cube5.GetComponent<Canvas>().enabled = true;
-                    audioSource2.volume = sound_Book_volume;
-                    audioSource2.PlayOneShot(sound_Book);
-                    LogSystemScript.GimicLog++;
-                    gimic3judment = false;
-                }
-            }
-            if (clickedGameObject.tag == "Voice")
-            {
-                if (voiceon == true)
-                {
-                    if (VoiceJudment == true)
+                    if (gimic3judment == true)
                     {
-                        LogSystemScript.VoiceLog += 1;
-                        VoiceJudment = false;
+                        GameObject cube5 = GameObject.Find("Theotext");
+                        GameObject cube6 = GameObject.Find("Theotext1");
+                        cube5.GetComponent<Canvas>().enabled = true;
+                        audioSource2.volume = sound_Book_volume;
+                        audioSource2.PlayOneShot(sound_Book);
+                    if (SystemScript.japan == true)
+                    {
+                        cube6.GetComponent<Text>().text = "親愛なる弟　テオ";
                     }
-
 
                     if (SystemScript.japan == false)
                     {
-                        audioSource2.volume = sound_English_volume;
-                        audioSource2.PlayOneShot(sound1);
-                        voiceon = false;
-                        GameObject.Find("Voiceicon").GetComponent<Renderer>().material.color = Color.white;
-                        return;
+                        cube6.GetComponent<Text>().text = "Dear MyBrother Theo";
                     }
-                    if (SystemScript.japan == true)
+                    LogSystemScript.WindowLog++;
+                        gimic3judment = false;
+                    }
+                }
+
+                if (hit.collider != null && clickedGameObject.tag == "Text")
+                {
+                    GameObject cube2 = GameObject.Find("Texter");
+                    GameObject cube3 = GameObject.Find("Texter2");
+                    GameObject cube10 = GameObject.Find("ReplayButon");
+                    GameObject cube11 = GameObject.Find("Back_AR2");
+                    GameObject cube13 = GameObject.Find("CommunicationButton");
+                    GameObject cube21 = GameObject.Find("GuideAnimation1");
+                    GameObject cube22 = GameObject.Find("GuideAnimation2");
+                    GameObject cube23 = GameObject.Find("GuideAnimation3");
+                    GameObject cube24 = GameObject.Find("GuideAnimation4");
+                    GameObject cube25 = GameObject.Find("GuideAnimation5");
+                    GameObject cube26 = GameObject.Find("GuideAnimation6");
+
+
+                    if (texton1 == true)
                     {
-                        audioSource2.volume = sound_japanese_volume;
+                        if (TextJudment == true)
+                        {
+                            worksmode = false;
+                            TextJudment = false;
+                        }
+
+                        cube2.GetComponent<Canvas>().enabled = true;
+                        cube3.GetComponent<Canvas>().enabled = true;
+                        cube10.GetComponent<Renderer>().material = mat2;
+                        cube11.GetComponent<Renderer>().enabled = false;
+                        cube13.GetComponent<Renderer>().enabled = false;
                         audioSource2.PlayOneShot(sound1_2);
-                        voiceon = false;
-                        GameObject.Find("Voiceicon").GetComponent<Renderer>().material.color = Color.white;
+                        timer_GohoMOvieJudgment = true;
+                        if (_currentCoroutine == null)
+                        {
+                            _currentCoroutine = StartCoroutine(GohoGuide());
+
+                        }
+
+
+                        LogSystemScript.TextLog += 1;
+                        laungageon = true;
+                        texton1 = false;
                         return;
                     }
-                }
-                if (voiceon == false)
-                {
-                    VoiceJudment = true;
-                    audioSource2.Stop();
-                    voiceon = true;
-                    GameObject.Find("Voiceicon").GetComponent<Renderer>().material.color = Color.gray;
-                    return;
-                }
-
-
-            }
-
-            if(clickedGameObject.tag == "Text")
-            {
-                GameObject cube2 = GameObject.Find("Texter");
-                GameObject cube3 = GameObject.Find("Navi");
-                GameObject cube4 = GameObject.Find("Navi_1");
-                if (texton1 == true)
-                {
-                    if (TextJudment == true)
+                    if (texton1 == false)
                     {
-                        audioSource2.volume = sound_Book_volume;
-                        audioSource2.PlayOneShot(sound_Book);
-                        LogSystemScript.TextLog += 1;
-                        worksmode = false;
-                        TextJudment = false;
-                        
+                        TextJudment = true;
+                        cube2.GetComponent<Canvas>().enabled = false;
+                        cube3.GetComponent<Canvas>().enabled = false;
+                        cube11.GetComponent<Renderer>().enabled = true;
+                        cube10.GetComponent<Renderer>().material = mat1;
+                        cube13.GetComponent<Renderer>().enabled = true;
+                        audioSource2.Stop();
+
+                        timer_GohoMOvieJudgment = false;
+                        Debug.Log("ゴッホのガイド鑑賞時間" + GohoTimerScript.timer_GohoMovie.ToString("f0") + "秒");
+                        GohoTimerScript.timer_GohoMovie = 0;
+                        cube21.GetComponent<Renderer>().enabled = false;
+                        cube22.GetComponent<Renderer>().enabled = false;
+                        cube21.GetComponent<Animator>().SetBool("GohoAnimation1On", false);
+                        cube22.GetComponent<Animator>().SetBool("GohoAnimation2On", false);
+                        cube23.GetComponent<Canvas>().enabled = false;
+                        cube24.GetComponent<Canvas>().enabled = false;
+                        cube25.GetComponent<Canvas>().enabled = false;
+                        cube26.GetComponent<Canvas>().enabled = false;
+
+
+                        if (_currentCoroutine != null)
+                        {
+                            // 実行中のコルーチンを停止（破棄）
+                            StopCoroutine(_currentCoroutine);
+                            _currentCoroutine = null;
+                        }
+
+                        texton1 = true;
+
+                        return;
                     }
-                    cube3.GetComponent<Canvas>().enabled = true;
-                    cube2.GetComponent<Canvas>().enabled = true;
-                    cube4.GetComponent<Canvas>().enabled = false;
-                    TouchTextScript.count = 0;
-                    GameObject.Find("Texton").GetComponent<Renderer>().material.color = Color.white;
-                    laungageon = true;
-                    texton1 = false;
-                    
-                    return;
+
                 }
-                if(texton1 ==false)
+
+
+                if (hit.collider != null && clickedGameObject.tag == "Back")
                 {
-                    TextJudment = true;
-                    cube2.GetComponent<Canvas>().enabled = false;
-                    cube3.GetComponent<Canvas>().enabled = false;
-                    cube4.GetComponent<Canvas>().enabled = true;
-                    GameObject.Find("Texton").GetComponent<Renderer>().material.color = Color.gray;
-                    texton1 = true;
-                    audioSource2.volume = sound_Book_volume;
-                    audioSource2.PlayOneShot(sound_Book);
-                    return;
+                    if (SceneManager.GetActiveScene().name == "AR_Main")
+                    {
+                        SceneManager.LoadScene("AR_Main");
+                    }
+                    else if (SceneManager.GetActiveScene().name == "AR_Main2")
+                    {
+                        SceneManager.LoadScene("AR_Main2");
+                    }
                 }
+
+                if (hit.collider != null && clickedGameObject.tag == "Wave")
+                {
+
+                    if (gimic2judment == true)
+                    {
+                        GameObject cube7 = GameObject.Find("particle_1");
+                        GameObject cube8 = GameObject.Find("particle_2");
+                        cube7.GetComponent<ParticleSystem>().Play();
+                        cube8.GetComponent<ParticleSystem>().Play();
+                        audioSource2.volume = sound_moon_volume;
+                        audioSource2.PlayOneShot(sound_Wing);
+                        LogSystemScript.GimicLog++;
+                        gimic2judment = false;
+                    }
+                }
+                if (hit.collider != null && clickedGameObject.tag == "Voice")
+                {
+                    GameObject cube30 = GameObject.Find("ReplayButon");
+                    GameObject cube31 = GameObject.Find("Back_AR2");
+                    GameObject cube32 = GameObject.Find("CommentGroup");
+                    GameObject cube33 = GameObject.Find("chattext");
+                    GameObject cube37 = GameObject.Find("Cloud_image");
+                    GameObject cube34 = GameObject.Find("CommunicationButton");
+                    GameObject cube35 = GameObject.Find("Editor");
+                    GameObject cube36 = GameObject.Find("Back_2");
+
+                    if (communicatejudment == true)
+                    {
+                        cube30.GetComponent<Renderer>().enabled = false;
+                        cube31.GetComponent<Renderer>().enabled = false;
+                        cube32.GetComponent<Canvas>().enabled = true;
+                        cube34.GetComponent<Renderer>().enabled = false;
+                        cube35.GetComponent<Renderer>().enabled = true;
+                        cube36.GetComponent<Renderer>().enabled = true;
+                        LogSystemScript.CommunicationLog++;
+                        timer_GohoCommunicationjudgment = true;
+
+                        if (InputTextScript.CommentStart == true)
+                        {
+                            cube37.GetComponent<Image>().enabled = true;
+                            cube33.GetComponent<Text>().text = InputTextScript.CommentSave;
+                        }
+                        communicatejudment = false;
+                        return;
+                    }
+
+
+                }
+                if (hit.collider != null && clickedGameObject.tag == "Back2")
+                {
+                    GameObject cube30 = GameObject.Find("ReplayButon");
+                    GameObject cube31 = GameObject.Find("Back_AR2");
+                    GameObject cube32 = GameObject.Find("CommentGroup");
+                    GameObject cube34 = GameObject.Find("CommunicationButton");
+                    GameObject cube35 = GameObject.Find("Editor");
+                    GameObject cube36 = GameObject.Find("Back_2");
+                    cube30.GetComponent<Renderer>().enabled = true;
+                    cube31.GetComponent<Renderer>().enabled = true;
+                    cube32.GetComponent<Canvas>().enabled = false;
+                    cube34.GetComponent<Renderer>().enabled = true;
+                    cube35.GetComponent<Renderer>().enabled = false;
+                    cube36.GetComponent<Renderer>().enabled = false;
+                    communicatejudment = true;
+                    timer_GohoCommunicationjudgment = false;
+                    Debug.Log("ゴッホのコミュニケーションツールを閲覧した時間" + GohoTimerScript.timer_GohoCommunication.ToString("f0") + "秒");
+                    GohoTimerScript.timer_GohoCommunication = 0;
 
             }
-
-
-            if (clickedGameObject.tag == "laungage")
-            {
-                if (laungageJudment == true)
+                if (hit.collider != null && clickedGameObject.tag == "Editor")
                 {
-                    LogSystemScript.LaungageLog += 1;
-                    laungageJudment = false;
+                    SceneManager.LoadScene("Communication");
                 }
-                GameObject cube3 = GameObject.Find("JapaneseMode");
-                GameObject cube4 = GameObject.Find("EnglishMode");
-                if (laungageon == true)
-                {
-                    GameObject.Find("laungageon").GetComponent<Renderer>().material.color = Color.white;
-                    cube3.GetComponent<Canvas>().enabled = true;
-                    cube4.GetComponent<Canvas>().enabled = true;
-                    laungageon = false;
-                    texton1 = true;
-                    worksmode = false;
-                    GameObject cube5 = GameObject.Find("Texter");
-                    GameObject cube6 = GameObject.Find("Navi");
-                    cube5.GetComponent<Canvas>().enabled = false;
-                    cube6.GetComponent<Canvas>().enabled = false;
-                    GameObject.Find("Texton").GetComponent<Renderer>().material.color = Color.gray;
-                    return;
-
-                    
-                }
-
-                if (laungageon == false)
-                {
-                    laungageJudment = true;
-                    GameObject.Find("laungageon").GetComponent<Renderer>().material.color = Color.gray;
-                    cube3.GetComponent<Canvas>().enabled = false;
-                    cube4.GetComponent<Canvas>().enabled = false;
-                    laungageon = true;
-                    return;
-
-
-                }
-            }
-
-            if (clickedGameObject.tag == "Back")
-            {
-                if (SceneManager.GetActiveScene().name == "AR_Main")
-                {
-                    SceneManager.LoadScene("AR_Main");
-                }
-                else if (SceneManager.GetActiveScene().name == "AR_Main2")
-                {
-                    SceneManager.LoadScene("AR_Main2");
-                }
-            }
-
-            if(clickedGameObject.tag == "Wave")
-            {
-                
-                if (gimic2judment == true)
-                {
-                    GameObject cube7 = GameObject.Find("particle_1");
-                    GameObject cube8 = GameObject.Find("particle_2");
-                    cube7.GetComponent<ParticleSystem>().Play();
-                    cube8.GetComponent<ParticleSystem>().Play();
-                    audioSource2.volume = sound_moon_volume;
-                    audioSource2.PlayOneShot(sound_Wing);
-                    LogSystemScript.GimicLog++;
-                    gimic2judment = false;
-                }
-            }
-
+            
 
         }
 
+
+
+
+    }
+    IEnumerator GohoGuide()
+    {
+        GameObject cube20 = GameObject.Find("Text_G1");
+        GameObject cube21 = GameObject.Find("GuideAnimation1");
+        GameObject cube22 = GameObject.Find("GuideAnimation2");
+        GameObject cube23 = GameObject.Find("GuideAnimation3");
+        GameObject cube24 = GameObject.Find("GuideAnimation4");
+        GameObject cube25 = GameObject.Find("GuideAnimation5");
+        GameObject cube26 = GameObject.Find("GuideAnimation6");
+        cube20.GetComponent<Text>().text = "星月夜\nゴッホ";
+        //5秒停止
+        yield return new WaitForSeconds(5);
+
+        cube20.GetComponent<Text>().text = "この作品は、サン＝レミのサンポール療養院にゴッホが入院している時に窓から見える村の風景を描いたものです";
+        cube21.GetComponent<Renderer>().enabled = true;
+        cube22.GetComponent<Renderer>().enabled = true;
+
+        cube21.GetComponent<Animator>().SetBool("GohoAnimation1On", true);
+        cube22.GetComponent<Animator>().SetBool("GohoAnimation2On", true);
+
+        yield return new WaitForSeconds(10);
+        cube21.GetComponent<Renderer>().enabled = false;
+        cube22.GetComponent<Renderer>().enabled = false;
+        cube21.GetComponent<Animator>().SetBool("GohoAnimation1On", false);
+        cube22.GetComponent<Animator>().SetBool("GohoAnimation2On", false);
+        cube23.GetComponent<Canvas>().enabled = true;
+        cube20.GetComponent<Text>().text = "実際の絵画をみてみましょう\n(実物と見比べましょう)";
+
+        yield return new WaitForSeconds(5);
+        cube23.GetComponent<Canvas>().enabled = false;
+        cube24.GetComponent<Canvas>().enabled = true;
+        cube20.GetComponent<Text>().text = "天と地を接続している糸杉は、一般的に天国と関連して、死の架け橋の象徴とみなされています";
+
+        yield return new WaitForSeconds(10);
+
+        cube20.GetComponent<Text>().text = "また、ゴッホの記憶がコラージュ的に表現されており、現実的風景ではありません";
+        cube24.GetComponent<Canvas>().enabled = false;
+        
+        yield return new WaitForSeconds(10);
+        cube25.GetComponent<Canvas>().enabled = true;
+        cube20.GetComponent<Text>().text = "例えば、中央に見える教会はフランスの教会ではなく、ゴッホの故郷であるオランダの教会が描かれています";
+
+        yield return new WaitForSeconds(10);
+        cube25.GetComponent<Canvas>().enabled = false;
+        cube26.GetComponent<Canvas>().enabled = true;
+        cube20.GetComponent<Text>().text = "巨大な星々も、当時夜明けの空に見えた金星をイメージしたと考えられており、空想を織り交ぜた描写と言えるでしょう";
+
+        yield return new WaitForSeconds(15);
+        cube26.GetComponent<Canvas>().enabled = false;
+
+        GameObject cube2 = GameObject.Find("Texter");
+        GameObject cube3 = GameObject.Find("Texter2");
+        GameObject cube10 = GameObject.Find("ReplayButon");
+        GameObject cube11 = GameObject.Find("Back_AR2");
+        GameObject cube34 = GameObject.Find("CommunicationButton");
+        TextJudment = true;
+        cube2.GetComponent<Canvas>().enabled = false;
+        cube3.GetComponent<Canvas>().enabled = false;
+        cube11.GetComponent<Renderer>().enabled = true;
+        cube10.GetComponent<Renderer>().material = mat1;
+        cube34.GetComponent<Renderer>().enabled = true;
+        audioSource2.Stop();
+        timer_GohoMOvieJudgment = false;
+        Debug.Log("ゴッホのガイド鑑賞時間" + GohoTimerScript.timer_GohoMovie.ToString("f0")+"秒");
+        GohoTimerScript.timer_GohoMovie = 0;
+        texton1 = true;
+        if (_currentCoroutine != null)
+        {
+            // 実行中のコルーチンを停止（破棄）
+            StopCoroutine(_currentCoroutine);
+            _currentCoroutine = null;
+        }
+        yield break;
     }
 }

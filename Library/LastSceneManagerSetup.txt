@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/CommunicationSystem/Communication.unity
+- path: Assets/PhotoContent/Scene/AR_Photo.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

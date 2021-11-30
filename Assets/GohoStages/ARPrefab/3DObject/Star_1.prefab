@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4683343178673400142}
   - component: {fileID: 4683343178673400115}
   m_Layer: 0
-  m_Name: GuideARobject4
-  m_TagString: Untagged
+  m_Name: Star_1
+  m_TagString: Star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4683343178673400155}
-  m_LocalRotation: {x: 0.00000009008727, y: -0.07978919, z: 0.00000012000515, w: 0.9968118}
+  m_LocalRotation: {x: 0, y: -0.07979014, z: 0, w: 0.99681175}
   m_LocalPosition: {x: 2.2139833, y: -1.9086494, z: 0.95203805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 14.115001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -9.153001, z: 0}
 --- !u!33 &4683343178673400136
 MeshFilter:
   m_ObjectHideFlags: 0

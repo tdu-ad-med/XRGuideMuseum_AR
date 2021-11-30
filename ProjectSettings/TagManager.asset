@@ -21,6 +21,7 @@ TagManager:
   - Wave
   - Back2
   - Editor
+  - Star
   layers:
   - Default
   - TransparentFX

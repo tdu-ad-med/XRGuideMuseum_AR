@@ -55,8 +55,8 @@ public class UIScript : MonoBehaviour
 
     public void textGuideOn()
     {
-        
-        
+        SceneManager.LoadScene("AR_Photo");
+
     }
     public void LaungageGuideOn()
     {

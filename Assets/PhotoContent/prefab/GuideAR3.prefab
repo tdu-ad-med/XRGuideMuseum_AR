@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8138662685160594887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8590870921308326969}
+  - component: {fileID: 827044049254030037}
+  - component: {fileID: 3447896581879806556}
+  - component: {fileID: 9121721026430483826}
+  - component: {fileID: 6265630671111171714}
+  m_Layer: 0
+  m_Name: GuideAR3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8590870921308326969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138662685160594887}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!33 &827044049254030037
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138662685160594887}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3447896581879806556
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138662685160594887}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &9121721026430483826
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138662685160594887}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6265630671111171714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138662685160594887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d79fdba0680461998633a8283b520c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AR_Star: {fileID: 2959526136334477384, guid: 3a8527c1f8d08423eb6e3aa040aba482, type: 3}
+  AR_Cloud: {fileID: 249616459390442767, guid: 862756aef462c4c0b85cfe64c571ce66, type: 3}
+  AR_Moon: {fileID: 3731553538382923085, guid: 2c299f0cf443846909fea5f541bd8b71, type: 3}
+  AR_Theo: {fileID: 4236417343864157909, guid: a9a1a6fc726424cd9aa9af378b2e6284, type: 3}
+  AR_Goho: {fileID: 3290973882369254361, guid: 1f17719a86f3b4ed1a795c3c36b1c134, type: 3}
+  AR_Wave1: {fileID: 2470333236599715857, guid: 7294a30d44db54c3fb5200a7263b2b95,
+    type: 3}
+  AR_Wave2: {fileID: 5448497067078508594, guid: 1c31d9b6cc2c340f0879dac649a4693b,
+    type: 3}
+  AR_People1: {fileID: 7280799155063586885, guid: cf94db1c2765544348cb2100ec14c3a8,
+    type: 3}
+  AR_People2: {fileID: 162956259224443021, guid: 379003dd1c2374ae9a510dd68b8601cd,
+    type: 3}
+  AR_GohoHokusai: {fileID: 1413331669239531115, guid: 17ba7ad52ac1847bf91de48617429451,
+    type: 3}
+  AR_Icon1: {fileID: 6232289676096328909, guid: 20f7ab3d6be694082a7b0e054d60d028,
+    type: 3}
+  AR_Icon2: {fileID: 5222169162007807317, guid: fbaeae139d572420fb91b6140b85e7c9,
+    type: 3}
+  MessageMain: {fileID: 8804247828960205517, guid: bce333b98f6164f9190bbfbe9f7be094,
+    type: 3}

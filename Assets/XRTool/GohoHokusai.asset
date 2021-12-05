@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: GohoHokusai
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5611027361257443056
+  m_GuidHigh: 2850676306372664485
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4881255204488535422
+      m_GuidHigh: 4148286101462278532
+    m_SerializedTextureGuid:
+      m_GuidLow: 14173445815418125627
+      m_GuidHigh: 13863238316107386682
+    m_Size: {x: 0.2, y: 0.125}
+    m_SpecifySize: 1
+    m_Name: Gohho
+    m_Texture: {fileID: 2800000, guid: ff3e7d3b31dfc4b23a4f2a44cc1d64c0, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5723703228105564093
+      m_GuidHigh: 1845735435965143203
+    m_SerializedTextureGuid:
+      m_GuidLow: 1506382449167566909
+      m_GuidHigh: 1837472763590841384
+    m_Size: {x: 0.2, y: 0.112500004}
+    m_SpecifySize: 1
+    m_Name: Hokusai
+    m_Texture: {fileID: 2800000, guid: 3a84083dbedb14e72894493ebe038019, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5299022342630306201
+      m_GuidHigh: 17228641722741546412
+    m_SerializedTextureGuid:
+      m_GuidLow: 10708995256428696391
+      m_GuidHigh: 14381644836631895467
+    m_Size: {x: 0.15, y: 0.15}
+    m_SpecifySize: 1
+    m_Name: icon_scan2
+    m_Texture: {fileID: 0}

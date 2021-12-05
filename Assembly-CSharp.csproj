@@ -85,6 +85,9 @@
     <Compile Include="Assets\PhotoContent\Script\FlagScript3.cs" />
     <Compile Include="Assets\PhotoContent\Script\PhotoScript.cs" />
     <Compile Include="Assets\PhotoContent\Script\RayCastPhotoScript.cs" />
+    <Compile Include="Assets\QuizSystem\Scripts\FlagScript4.cs" />
+    <Compile Include="Assets\QuizSystem\Scripts\QuizSystem.cs" />
+    <Compile Include="Assets\QuizSystem\Scripts\RayCastQuizScript.cs" />
     <None Include="Assets\LunarConsole\readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.21f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

@@ -22,6 +22,10 @@ TagManager:
   - Back2
   - Editor
   - Star
+  - HokusaiQuizStage
+  - GohoQuizStage
+  - A1
+  - A2
   layers:
   - Default
   - TransparentFX

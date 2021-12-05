@@ -110,7 +110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5199\u771F\u30DE\u30FC\u30AB\u30FCor\u7D75\u753B\u3092\u8AAD\u307F\u8FBC\u3093\u3067\u304F\u3060\u3055\u3044"
+  m_Text: "XR\u30DE\u30FC\u30AB\u30FCor\u7D75\u753B\u3092\u8AAD\u307F\u8FBC\u3093\u3067\u304F\u3060\u3055\u3044"
 --- !u!1 &8789354872350843048
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 43913022b80f043e29c64d7b4b68e512, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 70c69347fe72949dab5d461dc8dd95c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

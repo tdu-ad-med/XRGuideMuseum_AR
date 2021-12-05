@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/GohoStages/Scenes/AR_Main2.unity
     guid: 046a0072a39454dad999f8903048ce7e
   - enabled: 1
-    path: Assets/CommunicationSystem/Communication.unity
+    path: Assets/CommunicationSystem/Scene/Communication.unity
     guid: 14eed7873544247889f2d36640f35bd1
   - enabled: 1
     path: Assets/PhotoContent/Scene/AR_Photo.unity
     guid: 303448d897e804003b89f5bdc5a23d9f
+  - enabled: 1
+    path: Assets/QuizSystem/Scene/AR_Quiz.unity
+    guid: 5b45dda38cc9b485b83d6748ab4f8790
   - enabled: 0
     path: 
     guid: 2b22df61590a14076a0c552c828f25ac

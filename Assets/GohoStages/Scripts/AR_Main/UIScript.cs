@@ -48,9 +48,7 @@ public class UIScript : MonoBehaviour
 
     public void voiceGuideOn()
     {
-        
-
-
+        SceneManager.LoadScene("AR_Quiz");
     }
 
     public void textGuideOn()

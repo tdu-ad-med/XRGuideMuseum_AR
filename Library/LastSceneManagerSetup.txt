@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/PhotoContent/Scene/AR_Photo.unity
+- path: Assets/QuizSystem/Scene/AR_Quiz.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

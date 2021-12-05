@@ -579,6 +579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI4: {fileID: 1717397863858090796}
   audioClip1: {fileID: 8300000, guid: 47b7400badf984f7fa0d00b13a562d8d, type: 3}
+  TweetButtontool: {fileID: 2771993302900693186}
 --- !u!81 &1975730564
 AudioListener:
   m_ObjectHideFlags: 0
@@ -759,6 +760,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI2
       objectReference: {fileID: 0}
+    - target: {fileID: 2200509441910228427, guid: a6c6cebeb8df44e778abaee7d4141709,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2200509441910228430, guid: a6c6cebeb8df44e778abaee7d4141709,
         type: 3}
       propertyPath: m_RootOrder
@@ -824,13 +830,29 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1975730560}
+    - target: {fileID: 4040130499653826125, guid: a6c6cebeb8df44e778abaee7d4141709,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1975730563}
     - target: {fileID: 6218736924455834970, guid: a6c6cebeb8df44e778abaee7d4141709,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1975730560}
+    - target: {fileID: 7993995883972390997, guid: a6c6cebeb8df44e778abaee7d4141709,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6c6cebeb8df44e778abaee7d4141709, type: 3}
+--- !u!1 &2771993302900693186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7993995883972390997, guid: a6c6cebeb8df44e778abaee7d4141709,
+    type: 3}
+  m_PrefabInstance: {fileID: 2771993302900693185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3318285161656966279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2470259436815855112, guid: 8b6fcbc5a99b349fbad030bfc8834618,
@@ -1305,11 +1327,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1975730560}
-    - target: {fileID: 3245168969984972656, guid: 02e58f8829f7e4529a6d1c27d5f19ef8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3612156380608861501, guid: 02e58f8829f7e4529a6d1c27d5f19ef8,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1390,11 +1407,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1975730560}
-    - target: {fileID: 5213127685078572675, guid: 02e58f8829f7e4529a6d1c27d5f19ef8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5437208261723466397, guid: 02e58f8829f7e4529a6d1c27d5f19ef8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

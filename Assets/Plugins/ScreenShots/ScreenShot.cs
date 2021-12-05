@@ -8,10 +8,12 @@ public class ScreenShot : MonoBehaviour
     public GameObject UI4;
     private AudioSource audioSource;
     public AudioClip audioClip1;
+    public GameObject TweetButtontool;
 
     bool Completed= false;
     float timer = 0;
     static public bool PhotoStart = false;
+    string path2;
     [DllImport("__Internal")]
     private static extern void SaveToAlbum(string path);
 
@@ -40,6 +42,7 @@ public class ScreenShot : MonoBehaviour
             if (timer > 0.5f && timer < 3.0f)
             {
                 UI4.SetActive(true);
+                TweetButtontool.SetActive(true);
             }
             if (timer >= 3.0f)
             {
@@ -71,8 +74,16 @@ public class ScreenShot : MonoBehaviour
         
         // カメラロールに保存する
         StartCoroutine(SaveToCameraroll(path));
+        path2=path;
 #endif
         Completed = true;
 
+    }
+    public void TweetButtonPhoto()
+    {
+        string text = "\n#XRGUIDEMUSEUM";
+        string url = "";
+        //string image = null;
+        SocialConnector.PostMessage(SocialConnector.ServiceType.Twitter, text, url, path2);
     }
 }
